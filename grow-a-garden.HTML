@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grow a Garden Generator</title>
+  <style>
+    body {
+      margin: 0;
+      padding-top: 50px; /* for topnav */
+      background: #0d0d0d;
+      color: #b6ffb6;
+      font-family: 'Courier New', monospace;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    /* Top Nav */
+    .topnav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 50px;
+      background: #1b1b1b;
+      box-shadow: 0 0 10px #70ff70;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      font-weight: bold;
+      font-size: 16px;
+      z-index: 1000;
+    }
+
+    .topnav a {
+      color: #b6ffb6;
+      text-decoration: none;
+      margin-left: auto;
+      background: #262626;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .topnav a:hover {
+      background: #70ff70;
+      color: #000;
+    }
+
+    .container {
+      width: 95%;
+      max-width: 420px;
+      background: #1b1b1b;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #70ff70;
+      text-align: center;
+
+      max-height: calc(100vh - 60px);
+      overflow-y: auto;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    input, select {
+      background: #262626;
+      color: #b6ffb6;
+    }
+
+    select option {
+      color: #000;
+    }
+
+    button {
+      background: #70ff70;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #55cc55;
+    }
+
+    pre#terminal {
+      background: #000;
+      color: #b6ffb6;
+      text-align: left;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 5px;
+      height: 200px;
+      overflow-y: auto;
+      font-size: 14px;
+      display: none;
+      white-space: pre-wrap;
+    }
+
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+      }
+      20%, 22%, 24%, 55% {
+        opacity: 0.3;
+      }
+    }
+
+    .flicker {
+      animation: flicker 1.5s infinite;
+    }
+  </style>
+
+  <!-- AdBlueMedia Locker Script -->
+  <script type="text/javascript">
+    var rXPam_qfw_robZJc = {"it": 4502346, "key": "5e77b"};
+  </script>
+  <script src="https://dlk457skl57zp.cloudfront.net/8e59091.js"></script>
+</head>
+<body>
+  <div class="topnav">
+    Grow a Garden Generator
+    <a href="blox-fruits.html" target="_blank" rel="noopener noreferrer">Go to Blox Fruits</a>
+  </div>
+
+  <div class="container">
+    <h2 class="flicker">Grow a Garden Generator</h2>
+    <input type="text" id="username" placeholder="Enter your Roblox username" />
+    <select id="fruit">
+      <option value="Moon Blossom">🌙 Moon Blossom</option>
+      <option value="Bamboo">🎋 Bamboo</option>
+      <option value="Beanstalk">🌱 Beanstalk</option>
+      <option value="Cacao">🍫 Cacao</option>
+      <option value="Pepper">🌶️ Pepper</option>
+      <option value="Mushroom">🍄 Mushroom</option>
+      <option value="Grape">🍇 Grape</option>
+    </select>
+    <button onclick="startGeneration()">Generate Fruit</button>
+    <pre id="terminal"></pre>
+  </div>
+
+  <!-- Sounds -->
+  <audio id="type-sound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_7c030dc7be.mp3" preload="auto"></audio>
+  <audio id="alert-sound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_d0cf84df16.mp3" preload="auto"></audio>
+
+  <script>
+    const steps = [
+      "Connecting to Grow a Garden server...",
+      "Checking garden inventory...",
+      "Generating fruit: [FRUIT]...",
+      "Encrypting fruit data...",
+      "Syncing with Roblox servers...",
+      "Finalizing request..."
+    ];
+
+    function delay(ms) {
+      return new Promise(res => setTimeout(res, ms));
+    }
+
+    async function startGeneration() {
+      const username = document.getElementById("username").value.trim();
+      const fruit = document.getElementById("fruit").value;
+      const terminal = document.getElementById("terminal");
+      const typeSound = document.getElementById("type-sound");
+      const alertSound = document.getElementById("alert-sound");
+
+      if (!username) {
+        alert("Please enter your Roblox username.");
+        return;
+      }
+
+      terminal.style.display = "block";
+      terminal.innerText = `User: ${username}\nSelected Fruit: ${fruit}\n\n`;
+
+      for (let step of steps) {
+        const line = step.replace("[FRUIT]", fruit);
+        await typeLine(terminal, line, typeSound);
+        await delay(300 + Math.random() * 150);
+      }
+
+      await typeLine(terminal, "\n[!] Human verification required...", typeSound);
+      alertSound.play();
+      await delay(1500);
+      _Tm(); // Open AdBlueMedia locker
+    }
+
+    async function typeLine(el, text, sound) {
+      for (let i = 0; i < text.length; i++) {
+        el.innerText += text[i];
+        el.scrollTop = el.scrollHeight;
+        if (sound) {
+          sound.currentTime = 0;
+          sound.play();
+        }
+        await delay(15 + Math.random() * 20);
+      }
+      el.innerText += "\n";
+    }
+  </script>
+</body>
+</html>
