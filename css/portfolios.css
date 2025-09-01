@@ -1,0 +1,161 @@
+
+[class|=isotope-list] article .portfolio-list-box .title a:hover{
+  color: #20a3f0;
+}
+.portfolio-detail{
+  position: relative;
+}
+.portfolio-detail .detail-gallery{
+  position: relative;
+  z-index: 99;
+}
+.portfolio-detail .detail-gallery>.detail-images .swiper-container .swiper-slide{
+  width: 100%;
+}
+.portfolio-detail .detail-gallery>.detail-images .swiper-container .swiper-slide img{
+  max-width: 100%;
+}
+
+.portfolio-detail.medialeft .detail-gallery{ float:left; }
+.portfolio-detail.medialeft .detail-article{ float:right; padding-left: 30px; }
+.portfolio-detail.mediaright .detail-gallery{ float:right; }
+.portfolio-detail.mediaright .detail-article{ float:left; padding-right: 30px; }
+
+
+.portfolio-detail.media-4 .detail-gallery{ width: 33.33333333%; }
+.portfolio-detail.media-4 .detail-article{ width: 66.66666667%; }
+.portfolio-detail.media-6 .detail-gallery{ width: 50%; }
+.portfolio-detail.media-6 .detail-article{ width: 50%; }
+.portfolio-detail.media-8 .detail-gallery{ width: 66.66666667%; }
+.portfolio-detail.media-8 .detail-article{ width: 33.33333333%; }
+
+@media only screen and (max-width: 991px){
+  .portfolio-detail .detail-gallery{
+      float:none !important;
+      width:100% !important;
+  }
+  .portfolio-detail .detail-article{
+      float:none !important;
+      width:100% !important;
+  }
+  .portfolio-detail.medialeft .detail-article{ padding-left: 0; }
+  .portfolio-detail.mediaright .detail-article{ padding-right: 0; }
+}
+
+.portfolio-detail .detail-images img{
+  width: 100%;
+}
+.portfolio-detail .detail-gallery .dg-imagebox02:hover .bg{
+  opacity: 0.75;
+}
+.portfolio-detail .detail-images .list-item:last-of-type{
+  margin-bottom:0 !important;
+}
+.portfolio-detail.spacing-sm .detail-images .list-item{ margin-bottom: 5px ; }
+.portfolio-detail.spacing-md .detail-images .list-item{ margin-bottom: 24px ; }
+.portfolio-detail.spacing-lg .detail-images .list-item{ margin-bottom: 36px ; }
+.portfolio-detail.spacing-xl .detail-images .list-item{ margin-bottom: 54px ; }
+
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+  .portfolio-detail.spacing-sm .detail-images .list-item{ margin-bottom: 3px ; }
+  .portfolio-detail.spacing-md .detail-images .list-item{ margin-bottom: 14.4px ; }
+  .portfolio-detail.spacing-lg .detail-images .list-item{ margin-bottom: 21.6px ; }
+  .portfolio-detail.spacing-xl .detail-images .list-item{ margin-bottom: 27px ; }
+}
+@media only screen and (max-width: 991px) {
+  .portfolio-detail.spacing-sm .detail-images .list-item{ margin-bottom: 2.5px ; }
+  .portfolio-detail.spacing-md .detail-images .list-item{ margin-bottom: 12px ; }
+  .portfolio-detail.spacing-lg .detail-images .list-item{ margin-bottom: 18px ; }
+  .portfolio-detail.spacing-xl .detail-images .list-item{ margin-bottom: 27px; ; }
+}
+
+
+.portfolio-detail .detail-title-info{
+  display: table;
+}
+
+.portfolio-detail .ver-mid{
+display: table-cell;
+vertical-align: middle;
+}
+
+.portfolio-detail .detail-title {
+  font-size: 28px;
+  color: #333333;
+  margin: 0 0 5px;
+  font-weight: normal;
+}
+
+.portfolio-detail .list-info, 
+.portfolio-detail .list-info a, 
+.portfolio-detail .list-info a:link, 
+.portfolio-detail .list-info a:active, 
+.portfolio-detail .list-info a:visited{
+ color:#999999;
+ font-size: 13px;
+}
+.portfolio-detail .list-audio img{
+width:100%;
+}
+/* ------------- */
+.portfolio-detail .detail-info{
+text-align:center;
+color:#999999;
+font-size:13px;
+margin-bottom:15px;
+}
+.portfolio-detail .detail-info .sep{
+padding:0 10px;
+}
+.portfolio-detail .detail-info a, 
+.portfolio-detail .detail-info a:link, 
+.portfolio-detail .detail-info a:active, 
+.portfolio-detail .detail-info a:visited{
+color:#999999;
+}
+.portfolio-detail .detail-info a:hover{
+text-decoration:none;
+}
+
+
+.portfolio-detail .detail-social{
+  font-size: 14px;
+}
+
+
+
+.detail-recent .dg-imagebox08:hover .bg{
+  opacity: 0.75;
+}
+
+.portfolio-detail .detail-author-info .title a,
+.portfolio-detail .detail-port-nav a{
+  color: #333333;
+}
+
+
+
+
+.portfolio-pagetitle .detail-category{
+  font-size: 14px;
+  line-height: 22px;
+  font-style: italic;
+  
+  position: absolute;
+  left: 50%;
+  bottom: 90px;
+  cursor: pointer;
+  text-align: center;
+  z-index: 99;
+  transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+}
+
+@media only screen and (max-width: 767px) {
+  .portfolio-pagetitle .detail-category{
+    bottom: 24px;
+  }
+}

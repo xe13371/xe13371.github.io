@@ -1,0 +1,288 @@
+
+
+
+
+/*
+	.dg-topiconbox -> %s { icon外的边框是否是带3px圆角的方框 } square
+
+	.dg-topiconbox -> %s { 控制文字是深色还是浅色(白色) } color-dark / color-light
+
+	.dg-topiconbox -> %s { 控制文字的对齐方向) } text-left / text-center / text-right
+
+	.dg-topiconbox -> %s { 控制滑过后文字的颜色) } hovercolor-light
+
+	.dg-topiconbox -> %s { 控制滑过后icon的颜色) } hovericon-light
+
+	.dg-topiconbox -> %s { 控制滑过后的背景颜色) } single-bg(单一颜色) / grad-bg(渐变颜色)
+
+	.dg-topiconbox -> %s { 控制滑过后是否有阴影) } hovershadow
+
+	.dg-topiconbox>div -> %s { 控制icon的外观样式和动画) } dg-ico-max / dg-ico02 / dg-ico03 / dg-ico05 / dg-ico06 / dg-ico-animation03  / dg-ico-animation05 / dg-ico-animation04 /                                                        dg-ico-animation02 / dg-ico-animation08 / dg-ico-animation11 / dg-ico-animation12  / dg-ico-animation06 /                                                                        dg-ico-animation07 / dg-ico-animation09  / dg-ico-animation10
+
+	.dg-topiconbox>div -> %s { 控制icon的大小) } size-xs / size-sm / size-lg / size-xl / size-xxl
+
+	.dg-ico-animation03 ->%s { 控制icon的滑过动画是从里向外扩还是从外向里收 } animation-out / animation-in
+	.dg-ico-animation02 -> %s { 控制icon的滑过动画是从里向外扩还是从外向里收 } animation-out / animation-in
+
+	.dg-ico-animation06 -> %s { 控制icon的滑过动画是从哪个方向进 } animation-top / animation-left / animation-bottom / animation-right
+*/
+
+/*top icon box */
+.iconbox-equal-height [class*=col-],
+.iconbox-equal-height .dng-column-inner{
+	-webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.iconbox-equal-height [class*=col-] .dg-iconbox,
+.iconbox-equal-height .dng-column-inner .dg-iconbox{
+	-webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+
+
+.dg-iconbox .ult_main_cl.ult-adjust-bottom-margin{
+  margin-bottom: 0;  
+}
+
+.dg-topiconbox {
+  text-align: center;  
+  margin-bottom: 15px;
+  position: relative;
+  -moz-transition: all ease-in 250ms,opacity ease-in 0ms;
+  -webkit-transition: all ease-in 250ms,opacity ease-in 0ms;
+  transition: all ease-in 250ms,opacity ease-in 0ms;
+}
+.dg-topiconbox.boxshadow{
+	box-shadow: 0 0 30px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0 0 30px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 0 30px rgba(0,0,0,0.1);
+}
+.dg-topiconbox.hovershadow:hover{
+	box-shadow: 0 0 30px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+	-webkit-box-shadow: 0 0 30px rgba(0,0,0,0.15);
+}
+.dg-topiconbox.moveup:hover{
+	transform: translate3d(0, -10px, 0);
+	-ms-transform: translate3d(0, -10px, 0);
+	-moz-transform: translate3d(0, -10px, 0);
+	-webkit-transform: translate3d(0, -10px, 0);
+}
+.dg-topiconbox .title {
+	margin: 25px 0 15px 0;
+}
+
+.dg-topiconbox.color-light,
+.dg-topiconbox.color-light .title{
+  color: #FFF;  
+}
+.dg-topiconbox.title-line.color-light .title:after,
+.dg-topiconbox.title-longline.color-light .title:after{
+  border-color:#FFF;
+}
+
+.dg-topiconbox.hovericon-light:hover .dg-ico-max{
+	color: #FFF !important;  
+}
+.dg-topiconbox.hovercolor-light:hover,
+.dg-topiconbox.hovercolor-light:hover .title{
+  color: #FFF !important;  
+}
+.dg-topiconbox.title-line.hovercolor-light:hover .title:after,
+.dg-topiconbox.title-longline.hovercolor-light:hover .title:after{
+  border-color:#FFF !important;
+}
+
+.dg-topiconbox.title-line .title:after {
+    content: "";
+    width: 50px;
+    border-bottom: 1px solid #d3d3d3;
+    display: block;
+    margin: 20px auto 0;
+}
+.dg-topiconbox.title-longline .title:after {
+    content: "";
+    width: 50px;
+    border-bottom: 1px solid #d3d3d3;
+    display: block;
+    margin: 20px auto 0;
+    transition: all ease-in 250ms;
+    -moz-transition: all ease-in 250ms;
+    -webkit-transition: all ease-in 250ms;
+    -o-transition: all ease-in 250ms;
+	-ms-transition: all ease-in 250ms;
+}
+.dg-topiconbox.text-left .title:after {
+	margin-left: 0
+}
+.dg-topiconbox.text-right .title:after {
+	margin-right: 0
+}
+.dg-topiconbox.title-longline:hover .title:after {
+    width: 90px;
+}
+.dg-topiconbox a,
+.dg-topiconbox button,
+.dg-topiconbox input{
+	position: relative;
+	z-index:4;
+}
+.dg-topiconbox .fix-line{
+	position: absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	z-index: 3;
+}
+.dg-topiconbox .dg-ico-max,
+
+.dg-topiconbox .title,
+.dg-topiconbox .title::after{
+	position: relative;
+	transition: all ease-in 250ms;
+    -moz-transition: all ease-in 250ms;
+    -webkit-transition: all ease-in 250ms;
+    -o-transition: all ease-in 250ms;
+    -ms-transition: all ease-in 250ms;
+}
+.dg-topiconbox p{
+	position: relative;
+	margin-bottom: 8px;
+}
+.dg-topiconbox [class*="dg-ico"]{
+	position: relative;
+}
+.dg-topiconbox .size-xs.title{
+	margin: 15px 0 15px 0;
+}
+.dg-topiconbox.single-bg{
+	
+}
+.dg-topiconbox.single-bg:hover{
+	background-color:#1e7ad8;
+}
+.dg-topiconbox.grad-bg::before{
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	opacity: 0;
+	background: -webkit-linear-gradient(45deg, #1e7ad8, #1ed6d8 );
+    background: -o-linear-gradient(45deg, #1e7ad8, #1ed6d8 );
+    background: -moz-linear-gradient(45deg, #1e7ad8, #1ed6d8 );
+    background: linear-gradient(45deg, #1e7ad8,#1ed6d8 );
+	transition: all ease-in 250ms;
+    -moz-transition: all ease-in 250ms;
+    -webkit-transition: all ease-in 250ms;
+    -o-transition: all ease-in 250ms;
+    -ms-transition: all ease-in 250ms;
+}
+.dg-topiconbox.grad-bg.radius-0px::before{
+	border-radius:0px !important;
+-moz-border-radius:0px !important;
+-webkit-border-radius:0px !important;
+}
+.dg-topiconbox.grad-bg.radius-1px::before{
+	border-radius:1px !important;
+-moz-border-radius:1px !important;
+-webkit-border-radius:1px !important;
+}
+.dg-topiconbox.grad-bg.radius-2px::before{
+	border-radius:2px !important;
+-moz-border-radius:2px !important;
+-webkit-border-radius:2px !important;
+}
+.dg-topiconbox.grad-bg.radius-3px::before{
+	border-radius:3px !important;
+-moz-border-radius:3px !important;
+-webkit-border-radius:3px !important;
+}
+.dg-topiconbox.grad-bg.radius-4px::before{
+	border-radius:4px !important;
+-moz-border-radius:4px !important;
+-webkit-border-radius:4px !important;
+}
+.dg-topiconbox.grad-bg.radius-5px::before{
+	border-radius:5px !important;
+-moz-border-radius:5px !important;
+-webkit-border-radius:5px !important;
+}
+.dg-topiconbox.grad-bg.radius-6px::before{
+	border-radius:6px !important;
+-moz-border-radius:6px !important;
+-webkit-border-radius:6px !important;
+}
+.dg-topiconbox.grad-bg.radius-7px::before{
+	border-radius:7px !important;
+-moz-border-radius:7px !important;
+-webkit-border-radius:7px !important;
+}
+.dg-topiconbox.grad-bg.radius-8px::before{
+	border-radius:8px !important;
+-moz-border-radius:8px !important;
+-webkit-border-radius:8px !important;
+}
+.dg-topiconbox.grad-bg.radius-9px::before{
+	border-radius:9px !important;
+-moz-border-radius:9px !important;
+-webkit-border-radius:9px !important;
+}
+.dg-topiconbox.grad-bg.radius-10px::before{
+	border-radius:10px !important;
+-moz-border-radius:10px !important;
+-webkit-border-radius:10px !important;
+}
+.dg-topiconbox.grad-bg.radius-15px::before{
+	border-radius:15px !important;
+-moz-border-radius:15px !important;
+-webkit-border-radius:15px !important;
+}
+.dg-topiconbox.grad-bg.radius-semi-circle::before{
+	border-radius:1000px !important;
+-moz-border-radius:1000px !important;
+-webkit-border-radius:1000px !important;
+}
+.dg-topiconbox.grad-bg.radius-100::before{
+	border-radius:100% !important;
+-moz-border-radius:100% !important;
+-webkit-border-radius:100% !important;
+}
+.dg-topiconbox.grad-bg:hover::before{
+	opacity: 1;
+}
+
+.dg-topiconbox:hover .dg-ico05{
+	color: #FFF !important;
+}
+@media (max-width: 991px) {
+	.dg-topiconbox.text-right{
+		text-align: left !important;
+	}
+	.dg-topiconbox.text-right .dg-ico-max {
+		margin-left: 0;
+	}
+	.dg-topiconbox.text-right .title:after {
+		margin-right: auto;
+		margin-left: 0;
+	}
+}
+
+
+
+
+
+

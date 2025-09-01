@@ -1,0 +1,1528 @@
+/* 
+.isotope-grid -> data-stagger="%s" { Loading Method } (off)Load Viewable Area / (on)Load One By One
+.isotope-grid -> data-contour="%s" { Layout }  (true)Grid / (false)Masonry
+.isotope-grid -> isotope-effect-%s { Loading Effect } (none)None / (fade-in)Fade in / (move-up)Fade up / (scale-up)Zoom in / (fall-perspective)Fly in / (fly)3D Fly in / (flip)Horizontal flip / (helix)Vertical flip / (scale)Bounce in 
+.isotope-grid -> categories-%s { Nav Alignment } Center
+
+
+.isotope-console -> color-%s { Color Schemes }  dark / light
+.isotope-group -> style_%s { Category Styles } default / 1 / 2 / 3 / 4 / 5 / 6 / 7 / 8
+.isotope-group -> text-%s { Element Alignment } left / center / right
+
+.isotope-main -> spacing-%s  { Item Spacing } no / sm / md / lg / xl
+.isotope-main -> %s  { Display the distance on both sides } bothmargins
+
+.isotope-main -> %s  { Light Box } light-group-box
+if ( light-group-box )
+    .isotope-main -> data-group="%s"  { Group } on
+    if ( data-group="on" )
+        .isotope-main -> data-lightpath="%s"  { Path } horizontal / vertical
+    end
+    .isotope-main -> data-lightskin="%s"  { Light Box } dark / light / parade / smooth / metro-black / metro-white / mac
+end 
+*/
+
+
+
+
+
+
+
+
+
+/*isotope*/
+
+@-webkit-keyframes isotope-fadeIn {
+0% {
+opacity:0
+}
+ 100% {
+opacity:1
+}
+}
+@-moz-keyframes isotope-fadeIn {
+0% {
+opacity:0
+}
+ 100% {
+opacity:1
+}
+}
+@keyframes isotope-fadeIn {
+0% {
+opacity:0
+}
+ 100% {
+opacity:1
+}
+}
+ 
+
+
+.isotope-effect-fade-in .isotope-item.animat-order{
+  -webkit-animation-name: isotope-fadeIn;
+  -moz-animation-name: isotope-fadeIn;
+  animation-name: isotope-fadeIn;
+}
+
+@-webkit-keyframes isotope-move-up {
+  0% {
+    opacity:0;
+    -webkit-transform: translateY(200px);
+    transform: translateY(200px);
+  }
+   100% {
+  opacity:1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  }
+}
+@-moz-keyframes isotope-move-up {
+  0% {
+    opacity:0;
+    -moz-transform: translateY(200px);
+    transform: translateY(0);
+  }
+   100% {
+  opacity:1;
+  -moz-transform: translateY(0);
+  transform: translateY(0);
+  }
+}
+@keyframes isotope-move-up {
+  0% {
+    opacity:0;
+    transform: translateY(200px);
+  }
+   100% {
+  opacity:1;
+  transform: translateY(0);
+  }
+}
+
+.isotope-effect-move-up .isotope-item.animat-order{
+  -webkit-animation-name: isotope-move-up;
+  -moz-animation-name: isotope-move-up;
+  animation-name: isotope-move-up ; 
+}
+
+@-webkit-keyframes isotope-scale-up {
+0% {
+  -webkit-transform: scale(.6);
+  transform: scale(.6);
+  opacity:0
+}
+ 100% {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity:1
+}
+}
+@-moz-keyframes isotope-scale-up  {
+0% {
+  -webkit-transform: scale(.6);
+  transform: scale(.6);
+  opacity:0
+}
+ 100% {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity:1
+}
+}
+@keyframes isotope-scale-up {
+0% {
+  -webkit-transform: scale(.6);
+  transform: scale(.6);
+  opacity:0
+}
+ 100% {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity:1
+}
+}
+
+.isotope-effect-scale-up .isotope-item.animat-order{
+  opacity: 1;
+  -webkit-animation-name: isotope-scale-up;
+  -moz-animation-name: isotope-scale-up;
+  animation-name: isotope-scale-up;
+}
+
+@-webkit-keyframes isotope-fall-perspective {
+0% {
+  -webkit-transform: translateZ(400px) translateY(300px) rotateX(-65deg);
+  transform: translateZ(400px) translateY(300px) rotateX(-65deg);
+  opacity:0
+}
+ 100% {
+  -webkit-transform: translateZ(0) translateY(0) rotateX(0);
+  transform: translateZ(0) translateY(0) rotateX(0);
+  opacity:1
+}
+}
+@-moz-keyframes isotope-fall-perspective  {
+0% {
+  -webkit-transform: translateZ(400px) translateY(300px) rotateX(-65deg);
+  transform: translateZ(400px) translateY(300px) rotateX(-65deg);
+opacity:0
+}
+ 100% {
+  -webkit-transform: translateZ(0) translateY(0) rotateX(0);
+  transform: translateZ(0) translateY(0) rotateX(0);
+opacity:1
+}
+}
+@keyframes isotope-fall-perspective {
+0% {
+  -webkit-transform: translateZ(400px) translateY(300px) rotateX(-65deg);
+  transform: translateZ(400px) translateY(300px) rotateX(-65deg);
+opacity:0
+}
+ 100% {
+  -webkit-transform: translateZ(0) translateY(0) rotateX(0);
+  transform: translateZ(0) translateY(0) rotateX(0);
+opacity:1
+}
+}
+.isotope-effect-fall-perspective .isotope-item{
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+}
+
+.isotope-effect-fall-perspective .isotope-item.animat-order > div{
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-animation-name: isotope-fall-perspective;
+  -moz-animation-name: isotope-fall-perspective;
+  animation-name: isotope-fall-perspective; 
+}
+
+@-webkit-keyframes isotope-fly {
+0% {
+  -webkit-transform: rotateX(-180deg) translate3d(0,0,0);
+  transform: rotateX(-180deg) translate3d(0,0,0);
+  -webkit-transform-origin: 50% 50% -300px;
+  transform-origin: 50% 50% -300px;
+  opacity:0
+}
+ 100% {
+  -webkit-transform: rotateX(0) translate3d(0,0,0);
+  transform: rotateX(0) translate3d(0,0,0);
+  -webkit-transform-origin: 50% 50% 0px;
+  transform-origin: 50% 50% 0px;
+  opacity:1
+}
+}
+@-moz-keyframes isotope-fly  {
+0% {
+  -webkit-transform: rotateX(-180deg) translate3d(0,0,0);
+  transform: rotateX(-180deg) translate3d(0,0,0);
+  -webkit-transform-origin: 50% 50% -300px;
+  transform-origin: 50% 50% -300px;
+  opacity:0
+}
+ 100% {
+  -webkit-transform: rotateX(0) translate3d(0,0,0);
+  transform: rotateX(0) translate3d(0,0,0);
+  -webkit-transform-origin: 50% 50% 0px;
+  transform-origin: 50% 50% 0px;
+  opacity:1
+}
+}
+@keyframes isotope-fly {
+0% {
+  -webkit-transform: rotateX(-180deg) translate3d(0,0,0);
+  transform: rotateX(-180deg) translate3d(0,0,0);  
+  -webkit-transform-origin: 50% 50% -300px;
+  transform-origin: 50% 50% -300px;
+  opacity:0
+}
+ 100% {
+  -webkit-transform: rotateX(0) translate3d(0,0,0);
+  transform: rotateX(0) translate3d(0,0,0);
+  -webkit-transform-origin: 50% 50% 0px;
+  transform-origin: 50% 50% 0px;
+  opacity:1
+}
+}
+.isotope-effect-fly .isotope-item{
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+}
+
+.isotope-effect-fly .isotope-item.animat-order > div{
+
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+ -webkit-animation-name: isotope-fly;
+  -moz-animation-name: isotope-fly;
+  animation-name: isotope-fly;
+
+}
+
+@-webkit-keyframes isotope-flip {
+0% {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  opacity:0
+}
+ 100% {
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+  opacity:1
+}
+}
+@-moz-keyframes isotope-flip  {
+0% {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  opacity:0
+}
+ 100% {
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+  opacity:1
+}
+}
+@keyframes isotope-flip {
+0% {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  opacity:0
+}
+ 100% {
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0);
+  opacity:1
+}
+}
+.isotope-effect-flip .isotope-item{
+  -webkit-perspective: 1200px;
+  perspective: 1200px
+}
+.isotope-effect-flip .isotope-item.animat-order > div{
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+-webkit-animation-name: isotope-flip ;
+  -moz-animation-name: isotope-flip;
+  animation-name: isotope-flip;
+}
+
+@-webkit-keyframes isotope-helix {
+0% {
+  -webkit-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+  opacity:0;
+}
+ 100% {
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  opacity:1
+}
+}
+@-moz-keyframes isotope-helix  {
+0% {
+  -webkit-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+  opacity:0;
+}
+ 100% {
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  opacity:1
+}
+}
+@keyframes isotope-helix {
+0% {
+  -webkit-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+  opacity:0;
+}
+ 100% {
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  opacity:1
+}
+}
+.isotope-effect-helix .isotope-item{
+  -webkit-perspective: 1200px;
+  perspective: 1200px
+}
+
+.isotope-effect-helix .isotope-item.animat-order > div{
+   -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+-webkit-animation-name: isotope-helix ;
+  -moz-animation-name: isotope-helix;
+  animation-name: isotope-helix;
+}
+@-webkit-keyframes isotope-scale {
+0% {
+opacity:0;
+-webkit-transform: scale(.4);
+transform: scale(.4);
+}
+70% {
+opacity:0.8;
+-webkit-transform: scale(1.03);
+transform: scale(1.1);
+}
+
+ 100% {
+opacity:1;
+-webkit-transform: scale(1);
+transform: scale(1);
+}
+}
+@-moz-keyframes isotope-scale  {
+0% {
+opacity:0;
+-webkit-transform: scale(.4);
+transform: scale(.4);
+}
+70% {
+opacity:0.8;
+-webkit-transform: scale(1.03);
+transform: scale(1.1);
+}
+
+ 100% {
+opacity:1;
+-webkit-transform: scale(1);
+transform: scale(1);
+}
+}
+@keyframes isotope-scale {
+0% {
+opacity:0;
+-webkit-transform: scale(.4);
+transform: scale(.4);
+}
+70% {
+opacity:0.8;
+-webkit-transform: scale(1.03);
+transform: scale(1.1);
+}
+
+ 100% {
+opacity:1;
+-webkit-transform: scale(1);
+transform: scale(1);
+}
+}
+.isotope-effect-scale .isotope-item{
+  -webkit-perspective: 1200px;
+  perspective: 1200px
+}
+.isotope-effect-scale .isotope-item.animat-order > div{
+   -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-animation-name: isotope-scale;
+  -moz-animation-name: isotope-scale;
+  animation-name: isotope-scale;
+}
+.isotope-effect-fade-in .isotope-item,
+.isotope-effect-move-up .isotope-item,
+.isotope-effect-scale-up .isotope-item,
+.isotope-effect-fall-perspective .isotope-item > div,
+.isotope-effect-fly .isotope-item > div ,
+.isotope-effect-flip .isotope-item > div,
+.isotope-effect-helix .isotope-item > div,
+.isotope-effect-scale .isotope-item > div{
+  opacity: 0;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 200ms;
+  animation-delay: 200ms;
+}
+
+
+
+
+.isotope-effect-fade-in .isotope-item.animat-order,
+.isotope-effect-move-up .isotope-item.animat-order,
+.isotope-effect-scale-up .isotope-item.animat-order,
+.isotope-effect-fall-perspective .isotope-item.animat-order > div,
+.isotope-effect-fly .isotope-item.animat-order > div,
+.isotope-effect-flip .isotope-item.animat-order > div,
+.isotope-effect-helix .isotope-item.animat-order > div,
+.isotope-effect-scale .isotope-item.animat-order > div{
+  opacity: 1;
+  -webkit-animation-timing-function:ease-in-out;
+  -moz-animation-timing-function:ease-in-out;
+  animation-timing-function:ease-in-out;
+}
+
+.isotope-effect-fade-in .isotope-item.animat-order/*Fade in*/{
+  -webkit-animation-duration:0.7s!important;
+  -moz-animation-duration:0.7s!important;
+  animation-duration:0.7s!important;
+}
+
+.isotope-effect-fall-perspective .isotope-item.animat-order > div/*Fly in*/{
+  -webkit-animation-duration:0.5s!important;
+  -moz-animation-duration:0.5s!important;
+  animation-duration:0.5s!important;
+}
+.isotope-effect-move-up .isotope-item.animat-order/*Fade up*/,
+.isotope-effect-scale-up .isotope-item.animat-order/*Zoom in*/{
+  -webkit-animation-duration:0.35s!important;
+  -moz-animation-duration:0.35s!important;
+  animation-duration:0.35s!important;
+}
+.isotope-effect-fly .isotope-item.animat-order > div/*3D Fly in*/,
+.isotope-effect-flip .isotope-item.animat-order > div/*Horizontal flip*/,
+.isotope-effect-helix .isotope-item.animat-order > div/*Vertical flip*/,
+.isotope-effect-scale .isotope-item.animat-order > div/*Bounce in*/{
+  -webkit-animation-duration:0.6s!important;
+  -moz-animation-duration:0.6s!important;
+  animation-duration:0.6s!important; 
+}
+
+
+
+/*isotope*/
+.isotope-grid.loading .isotope-item{
+	/*
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	*/
+	float: left;
+	width: 5%;
+	  visibility:hidden;
+	
+  }
+  
+  .isotope-grid {
+	  /*overflow: hidden;*/
+  }
+  .isotope-grid.loading .isotope-main {
+	  min-height: 100px;
+  }
+  /*isotope filter*/
+  .isotope-grid .isotope-console{
+	  display:table;
+	  width:100%;
+	  margin-bottom:55px;
+  }
+  .isotope-grid .isotope-group {
+	  text-align: left;
+	  padding: 0;
+	  display:table-cell;
+  }
+  .isotope-grid .sort-btn{
+	  white-space:nowrap;
+  }
+  .isotope-grid .isotope-group-select {
+	  padding: 7px 24px 7px 7px ;
+	  display:table-cell;
+	  border:1px solid #dddddd;
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	  border-radius:3px;
+	  -moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	background: url(../images/select_arrows.png) no-repeat right -43px;
+  }
+  
+  .isotope-grid .isotope-console.color-light .isotope-group-select{
+	  color: #fff;
+	border-color: #f5f5f5;
+	background-position: right 17px;
+  }
+  .isotope-grid .isotope-console.color-light .isotope-group-select option{
+	color: #333; 
+  }
+  .isotope-grid.categories-Center .isotope-group-select {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+  }
+  .isotope-grid.categories-Center .isotope-console{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .isotope-grid .isotope-group a {
+	  margin: 0 10px 3px 0px;
+	  padding: 6px 20px 5px;
+	  color: #333;
+	  letter-spacing: 1px;
+	  border:1px solid #dddddd;
+	  background-color: transparent;
+	  text-decoration: none;
+	  display: inline-block;
+	  transition: all ease-in 200ms;
+	  -moz-transition: all ease-in 200ms;
+	  -webkit-transition: all ease-in 200ms;
+	  -o-transition: all ease-in 200ms;
+	  -ms-transition: all ease-in 200ms;
+	  position: relative;
+	  display: inline-block;
+	  border-radius:30px;
+	  -moz-border-radius:30px;
+	  -webkit-border-radius:30px;
+  }
+  .isotope-grid .isotope-console.color-light .isotope-group a{
+	  color: #fff;
+	  border-color: #f5f5f5;
+  }
+  .isotope-grid .isotope-console.color-light .isotope-group.style_8 a{
+	  color: #fff !important;
+  }
+  .isotope-grid .isotope-console.color-light .isotope-group.style_1 a,
+  .isotope-grid .isotope-console.color-light .isotope-group.style_2 a,
+  .isotope-grid .isotope-console.color-light .isotope-group.style_3 a,
+  .isotope-grid .isotope-console.color-light .isotope-group.style_5 a{
+	  color: #FFF;
+	  background-color: #444;
+  
+  }
+  .isotope-grid .isotope-group.style_1 a{
+	  border:1px solid transparent;
+	  background-color: #F3F3F3;
+  }
+  .isotope-grid .isotope-console.color-light .isotope-group.style_1 a{
+	  border-color: transparent;
+  }
+  
+  .isotope-grid .isotope-group.style_2 a{
+	box-shadow: 2px 3px 15px rgba(0,0,0,0.17);
+	-moz-box-shadow: 2px 3px 15px rgba(0,0,0,0.17);
+	-webkit-box-shadow: 2px 3px 15px rgba(0,0,0,0.17);
+	border-color: transparent;
+  }
+  
+  .isotope-grid .isotope-group.style_3 a{
+	  border:1px solid transparent;
+	  background-color: #F3F3F3;
+	  border-radius:0;
+	  -moz-border-radius:0;
+	  -webkit-border-radius:0;
+  }
+  .isotope-grid .isotope-console.color-light .isotope-group.style_3 a{
+	  border-color: transparent;
+  }
+  .isotope-grid .isotope-group.style_4 a{
+	  border-radius:4px;
+	  -moz-border-radius:4px;
+	  -webkit-border-radius:4px;
+  }
+  .isotope-grid .isotope-group.style_5 a{
+	  border:1px solid transparent;
+	  background-color: #F3F3F3;
+	  border-radius:4px;
+	  -moz-border-radius:4px;
+	  -webkit-border-radius:4px;
+  }
+  .isotope-grid .isotope-console.color-light .isotope-group.style_5 a{
+	  border-color: transparent;
+  }
+  .isotope-grid .isotope-group.style_6 a{
+	  margin-right: 0;
+	  border-left: 0;
+	  background-color: transparent;
+	  border-radius:0;
+	  -moz-border-radius:0;
+	  -webkit-border-radius:0;
+	  float: left;
+  }
+  .isotope-grid .isotope-group.style_6 a:first-child{
+	  border-left:1px solid #dddddd;
+	  border-radius: 4px 0 0 4px;
+  }
+  .isotope-grid .isotope-group.style_6 a:last-child{
+	  border-radius: 0 4px 4px 0;
+  }
+  .isotope-grid .isotope-group.style_7 a,
+  .isotope-grid .isotope-group.style_8 a{
+	  border: 0 ;
+	  font-size: 14px;
+  }
+  
+  .isotope-grid .isotope-group.style_8 a::after{
+	  content: "";
+	  position: absolute;
+	  bottom: 0;
+	  left: 20px;
+	  width: 0;
+	  height: 2px;
+	  background-color: #20a3f0; 
+	  
+	  transition: all ease-in 300ms;
+	  -moz-transition: all ease-in 300ms;
+	  -webkit-transition: all ease-in 300ms;
+	  -o-transition: all ease-in 300ms;
+	  -ms-transition: all ease-in 300ms;
+  }
+  .isotope-grid .isotope-console.color-light .isotope-group.style_8 a::after{
+    background-color: #FFF !important; 
+  }
+  .isotope-grid .isotope-group a:hover,
+  .isotope-grid .isotope-group a.active,
+  .isotope-grid .isotope-console.color-light .isotope-group a:hover,
+  .isotope-grid .isotope-console.color-light .isotope-group a.active{
+	  color:#20a3f0;
+	  border-color:#20a3f0;
+  }
+  .isotope-grid .isotope-group.style_1 a.active,
+  .isotope-grid .isotope-group.style_1 a:hover,
+  .isotope-grid .isotope-group.style_2 a.active,
+  .isotope-grid .isotope-group.style_2 a:hover,
+  .isotope-grid .isotope-group.style_3 a.active,
+  .isotope-grid .isotope-group.style_3 a:hover,
+  .isotope-grid .isotope-group.style_5 a.active,
+  .isotope-grid .isotope-group.style_5 a:hover,
+  .isotope-grid .isotope-console.color-light .isotope-group.style_1 a.active,
+  .isotope-grid .isotope-console.color-light .isotope-group.style_1 a:hover,
+  .isotope-grid .isotope-console.color-light .isotope-group.style_2 a.active,
+  .isotope-grid .isotope-console.color-light .isotope-group.style_2 a:hover,
+  .isotope-grid .isotope-console.color-light .isotope-group.style_3 a.active,
+  .isotope-grid .isotope-console.color-light .isotope-group.style_3 a:hover,
+  .isotope-grid .isotope-console.color-light .isotope-group.style_5 a.active,
+  .isotope-grid .isotope-console.color-light .isotope-group.style_5 a:hover{
+	  color:#FFF;
+	  border-color: transparent;
+  }
+  .isotope-grid .isotope-group.style_6 a.active,
+  .isotope-grid .isotope-group.style_6 a:hover,
+  .isotope-grid .isotope-console.color-light .isotope-group.style_6 a.active,
+  .isotope-grid .isotope-console.color-light .isotope-group.style_6 a:hover{
+	  color: #FFF;
+	  border-color:#20a3f0;
+  }
+  
+  .isotope-grid .isotope-group.style_8 a.active::after,
+  .isotope-grid .isotope-group.style_8 a:hover::after{
+	  content: "";
+	  width: -moz-calc( 100% - 40px );
+	  width: -webkit-calc( 100% - 40px );
+	  width: calc( 100% - 40px );
+  }
+  
+  .isotope-grid .isotope-group a:hover, 
+  .isotope-grid .isotope-group a.active,
+  .isotope-grid .isotope-console.color-light .isotope-group a:hover, 
+  .isotope-grid .isotope-console.color-light .isotope-group a.active{
+	  background-color: transparent;
+	  text-decoration: none;
+  }
+  .isotope-grid .isotope-group.style_1 a:hover, 
+  .isotope-grid .isotope-group.style_1 a.active,
+  .isotope-grid .isotope-group.style_2 a:hover, 
+  .isotope-grid .isotope-group.style_2 a.active,
+  .isotope-grid .isotope-group.style_3 a:hover, 
+  .isotope-grid .isotope-group.style_3 a.active,
+  .isotope-grid .isotope-group.style_5 a:hover, 
+  .isotope-grid .isotope-group.style_5 a.active,
+  .isotope-grid .isotope-group.style_6 a:hover, 
+  .isotope-grid .isotope-group.style_6 a.active,
+  .isotope-grid .isotope-console.color-light .isotope-group.style_1 a:hover, 
+  .isotope-grid .isotope-console.color-light .isotope-group.style_1 a.active,
+  .isotope-grid .isotope-console.color-light .isotope-group.style_2 a:hover, 
+  .isotope-grid .isotope-console.color-light .isotope-group.style_2 a.active,
+  .isotope-grid .isotope-console.color-light .isotope-group.style_3 a:hover, 
+  .isotope-grid .isotope-console.color-light .isotope-group.style_3 a.active,
+  .isotope-grid .isotope-console.color-light .isotope-group.style_5 a:hover, 
+  .isotope-grid .isotope-console.color-light .isotope-group.style_5 a.active,
+  .isotope-grid .isotope-console.color-light .isotope-group.style_6 a:hover, 
+  .isotope-grid .isotope-console.color-light .isotope-group.style_6 a.active{
+	  background-color: #20a3f0;
+  }
+  .isotope-grid .sort-btn{
+	  display:table-cell;
+	  text-align:right;
+	  margin:0;
+	  padding:0;
+	  list-style:none;
+	  vertical-align:middle;
+  }
+  .isotope-grid .sort-btn li{
+	  display:inline-block;
+	  vertical-align:middle;
+  }
+  .isotope-grid .sort-btn li{
+	  margin: 0 0 3px 15px;
+	  padding-right: 15px;
+  }
+  .isotope-grid .sort-btn a{
+	  font-size:14px;
+	  color:#888888;
+	  display:inline-block;
+	  vertical-align:middle;
+  }
+  .isotope-grid .isotope-console.color-light .sort-btn a{
+	  color: #fff;
+  }
+  .isotope-grid .sort-btn .filter-switch {
+	  display:inline-block;
+	  width: 32px;
+	  height: 16px;
+	  background: #20a3f0;
+	  border-radius: 16px;
+	  -moz-border-radius: 16px;
+	  -webkit-border-radius: 16px;
+	  position: relative;
+	  vertical-align:middle;
+	  margin:0px 5px;
+	  vertical-align:middle;
+	  cursor:pointer;
+  }
+  .isotope-grid .sort-btn .filter-switch:after{
+	  content:"";
+	  position: absolute;
+	  border-radius: 50%;
+	  -moz-border-radius:  50%;
+	  -webkit-border-radius:  50%;
+	  left: 18px;
+	  top: 2px;
+	  background: #FFF;
+	  display: block;
+	  height: 12px;
+	  width: 12px;
+	  transition: 		all ease-in 200ms;
+	  -moz-transition: 	all ease-in 200ms; /* Firefox 4 */
+	  -webkit-transition: all ease-in 200ms; /* Safari and Chrome */
+	  -o-transition: 		all ease-in 200ms; /* Opera */
+	  -ms-transition: 	all ease-in 200ms; /* IE9? */
+  }
+  .isotope-grid .sort-btn .active + .filter-switch:after{
+	  left:2px
+  }
+  .isotope-grid .isotope-group a.active:before, 
+  .isotope-grid .isotope-group a:hover.active:before {
+	  content: "";
+	  width: 100%;
+	  position: absolute;
+	  left: 0;
+	  bottom: 0;
+  }
+  @media only screen and (max-width: 992px) {
+	  .isotope-grid .isotope-console{
+		  margin-bottom: 20px;
+	  }
+  }
+  /*admin*/
+  @-webkit-keyframes loading-rotate {
+	0% {
+	  -webkit-transform: rotate(0);
+	}
+	 100% {
+	  -webkit-transform: rotate(360deg);
+	}
+  }
+  @-moz-keyframes loading-rotate{
+	0% {
+	  -moz-transform: rotate(0);
+	}
+	 100% {
+	  -moz-transform: rotate(360deg);
+	}
+  }
+  @keyframes loading-rotate{
+	0% {
+	  transform: rotate(0);
+	}
+	 100% {
+	  transform: rotate(360deg);
+	}
+  }
+  
+  .isotope-grid{
+	  position: relative;
+  }
+  .loading-ajax .isotope-main:before,
+  .isotope-grid .loading:before{
+	content: "";
+	background-color: rgba(255,255,255,0.8);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+  }
+  .loading-ajax .isotope-main:after,
+  .isotope-grid .loading:after{
+	content: "";
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	border: 5px solid #E3E3E3;
+	border-top-color:#555;
+	border-left-color:#555;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	margin-left: -20px;
+	-webkit-animation: loading-rotate 0.7s infinite;
+	-moz-animation: loading-rotate 0.7s infinite;
+	animation: loading-rotate 0.7s infinite;
+	z-index: 101;
+  }
+  .isotope-grid .isotope-item {
+	  -webkit-backface-visibility: hidden;
+	  -moz-backface-visibility: hidden;
+	  -webkit-transform: translate3d(0, 0, 0);
+	  -moz-transform: translate3d(0, 0, 0);
+  }
+
+  .isotope-grid[data-contour="true"] .isotope-main{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    height: auto!important;
+  }
+  .isotope-grid[data-contour="true"] .isotope-main .isotope-item{
+    position: relative!important;
+    top: 0!important;
+    left: 0!important;
+  }
+
+
+
+  /* dng-portfolio-isotope */
+.isotope-grid .isotope-item:hover{
+	z-index: 99;
+}
+.owl-carousel .owl-item:hover{
+	z-index: 99;
+}
+.isotope-grid .isotope-main .isotope-item .dg-content{
+  position: relative;
+}
+.isotope-grid .isotope-main .isotope-item .dg-content img{
+  max-width: 100%;
+}
+.isotope-grid .isotope-main.spacing-no{
+    /* 0 */
+    margin-top: 0;
+}
+.isotope-grid .isotope-main.spacing-no.bothmargins,
+.box-full-width .isotope-grid .isotope-main.spacing-no{
+    margin-left: 0;
+    margin-right: 0;
+}
+.isotope-grid .isotope-main.spacing-no .isotope-item{
+    margin-top: 0;
+}
+.isotope-grid .isotope-main.spacing-no .isotope-item [class*="dg-imagebox"],
+.isotope-grid .isotope-main.spacing-no .isotope-item [class*="dg-post-box"],
+.isotope-grid .isotope-main.spacing-no .isotope-item .dg-content{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.isotope-grid .isotope-main.spacing-sm{
+    /* 5 */
+    margin-top: -5px;
+    margin-left: -3px;
+    margin-right: -3px;
+}
+.isotope-grid .isotope-main.spacing-sm.bothmargins,
+.box-full-width .isotope-grid .isotope-main.spacing-sm{
+    margin-left: 3px ;
+    margin-right: 3px ;
+}
+.isotope-grid .isotope-main.spacing-sm .isotope-item{
+    margin-top: 5px;
+}
+.isotope-grid .isotope-main.spacing-sm .isotope-item [class*="dg-imagebox"],
+.isotope-grid .isotope-main.spacing-sm .isotope-item [class*="dg-post-box"],
+.isotope-grid .isotope-main.spacing-sm .isotope-item .dg-content{
+    margin-left: 3px;
+    margin-right: 3px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .isotope-grid .isotope-main.spacing-sm{
+        /* 5*0.6 */
+        margin-top: -3px;
+        margin-left: -2px;
+        margin-right: -2px;
+    }
+    .isotope-grid .isotope-main.spacing-sm.bothmargins,
+    .box-full-width .isotope-grid .isotope-main.spacing-sm{
+        margin-left: 2px ;
+        margin-right: 2px ;
+    }
+    .isotope-grid .isotope-main.spacing-sm .isotope-item{
+        margin-top: 3px;
+    }
+    .isotope-grid .isotope-main.spacing-sm .isotope-item [class*="dg-imagebox"],
+    .isotope-grid .isotope-main.spacing-sm .isotope-item [class*="dg-post-box"],
+    .isotope-grid .isotope-main.spacing-sm .isotope-item .dg-content{
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+}
+@media only screen and (max-width: 991px){
+    .isotope-grid .isotope-main.spacing-sm{
+        /* 5*0.5 */
+        margin-top: -3px;
+        margin-left: -1px;
+        margin-right: -1px;
+    }
+    .isotope-grid .isotope-main.spacing-sm.bothmargins,
+    .box-full-width .isotope-grid .isotope-main.spacing-sm{
+        margin-left: 1px ;
+        margin-right: 1px ;
+    }
+    .isotope-grid .isotope-main.spacing-sm .isotope-item{
+        margin-top: 3px;
+    }
+    .isotope-grid .isotope-main.spacing-sm .isotope-item [class*="dg-imagebox"],
+    .isotope-grid .isotope-main.spacing-sm .isotope-item [class*="dg-post-box"],
+    .isotope-grid .isotope-main.spacing-sm .isotope-item .dg-content{
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+}
+
+
+.isotope-grid .isotope-main.spacing-md{
+    /* 24 */
+    margin-top: -24px;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+.isotope-grid .isotope-main.spacing-md.bothmargins,
+.box-full-width .isotope-grid .isotope-main.spacing-md{
+    margin-left: 12px ;
+    margin-right: 12px ;
+}
+.isotope-grid .isotope-main.spacing-md .isotope-item{
+    margin-top: 24px;
+}
+.isotope-grid .isotope-main.spacing-md .isotope-item [class*="dg-imagebox"],
+.isotope-grid .isotope-main.spacing-md .isotope-item [class*="dg-post-box"],
+.isotope-grid .isotope-main.spacing-md .isotope-item .dg-content{
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+
+
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .isotope-grid .isotope-main.spacing-md{
+        /* 24*0.6 */
+        margin-top: -14px;
+        margin-left: -7px;
+        margin-right: -7px;
+    }
+    .isotope-grid .isotope-main.spacing-md.bothmargins,
+    .box-full-width .isotope-grid .isotope-main.spacing-md{
+        margin-left: 7px ;
+        margin-right: 7px ;
+    }
+    .isotope-grid .isotope-main.spacing-md .isotope-item{
+        margin-top: 14px;
+    }
+    .isotope-grid .isotope-main.spacing-md .isotope-item [class*="dg-imagebox"],
+    .isotope-grid .isotope-main.spacing-md .isotope-item [class*="dg-post-box"],
+    .isotope-grid .isotope-main.spacing-md .isotope-item .dg-content{
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+}
+@media only screen and (max-width: 991px){
+    .isotope-grid .isotope-main.spacing-md{
+        /* 24*0.5 */
+        margin-top: -12px;
+        margin-left: -6px;
+        margin-right: -6px;
+    }
+    .isotope-grid .isotope-main.spacing-md.bothmargins,
+    .box-full-width .isotope-grid .isotope-main.spacing-md{
+        margin-left: 6px ;
+        margin-right: 6px ;
+    }
+    .isotope-grid .isotope-main.spacing-md .isotope-item{
+        margin-top: 12px;
+    }
+    .isotope-grid .isotope-main.spacing-md .isotope-item [class*="dg-imagebox"],
+    .isotope-grid .isotope-main.spacing-md .isotope-item [class*="dg-post-box"],
+    .isotope-grid .isotope-main.spacing-md .isotope-item .dg-content{
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+}
+
+
+.isotope-grid .isotope-main.spacing-lg{
+    /* 36 */
+    margin-top: -36px;
+    margin-left: -18px;
+    margin-right: -18px;
+}
+.isotope-grid .isotope-main.spacing-lg.bothmargins,
+.box-full-width .isotope-grid .isotope-main.spacing-lg{
+    margin-left: 18px ;
+    margin-right: 18px ;
+}
+.isotope-grid .isotope-main.spacing-lg .isotope-item{
+    margin-top: 36px;
+}
+.isotope-grid .isotope-main.spacing-lg .isotope-item [class*="dg-imagebox"],
+.isotope-grid .isotope-main.spacing-lg .isotope-item [class*="dg-post-box"],
+.isotope-grid .isotope-main.spacing-lg .isotope-item .dg-content{
+    margin-left: 18px;
+    margin-right: 18px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .isotope-grid .isotope-main.spacing-lg{
+        /* 36*0.6 */
+        margin-top: -22px;
+        margin-left: -11px;
+        margin-right: -11px;
+    }
+    .isotope-grid .isotope-main.spacing-lg.bothmargins,
+    .box-full-width .isotope-grid .isotope-main.spacing-lg{
+        margin-left: 11px ;
+        margin-right: 11px ;
+    }
+    .isotope-grid .isotope-main.spacing-lg .isotope-item{
+        margin-top: 22px;
+    }
+    .isotope-grid .isotope-main.spacing-lg .isotope-item [class*="dg-imagebox"],
+    .isotope-grid .isotope-main.spacing-lg .isotope-item [class*="dg-post-box"],
+    .isotope-grid .isotope-main.spacing-lg .isotope-item .dg-content{
+        margin-left: 11px;
+        margin-right: 11px;
+    }
+}
+@media only screen and (max-width: 991px){
+    .isotope-grid .isotope-main.spacing-lg{
+        /* 36*0.5 */
+        margin-top: -18px;
+        margin-left: -9px;
+        margin-right: -9px;
+    }
+    .isotope-grid .isotope-main.spacing-lg.bothmargins,
+    .box-full-width .isotope-grid .isotope-main.spacing-lg{
+        margin-left: 9px ;
+        margin-right: 9px ;
+    }
+    .isotope-grid .isotope-main.spacing-lg .isotope-item{
+        margin-top: 18px;
+    }
+    .isotope-grid .isotope-main.spacing-lg .isotope-item [class*="dg-imagebox"],
+    .isotope-grid .isotope-main.spacing-lg .isotope-item [class*="dg-post-box"],
+    .isotope-grid .isotope-main.spacing-lg .isotope-item .dg-content{
+        margin-left: 9px;
+        margin-right: 9px;
+    }
+}
+
+.isotope-grid .isotope-main.spacing-xl{
+    /* 96 */
+    margin-top: -36px;
+    margin-left: -25px;
+    margin-right: -25px;
+}
+.isotope-grid .isotope-main.spacing-xl.bothmargins,
+.box-full-width .isotope-grid .isotope-main.spacing-xl{
+    margin-left: 25px ;
+    margin-right: 25px ;
+}
+.isotope-grid .isotope-main.spacing-xl .isotope-item{
+    margin-top: 36px;
+}
+.isotope-grid .isotope-main.spacing-xl .isotope-item [class*="dg-imagebox"],
+.isotope-grid .isotope-main.spacing-xl .isotope-item [class*="dg-post-box"],
+.isotope-grid .isotope-main.spacing-xl .isotope-item .dg-content{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .isotope-grid .isotope-main.spacing-xl{
+        /* 96*0.6 */
+        margin-top: -22px;
+        margin-left: -18px;
+        margin-right: -18px;
+    }
+    .isotope-grid .isotope-main.spacing-xl.bothmargins,
+    .box-full-width .isotope-grid .isotope-main.spacing-xl{
+        margin-left: 18px ;
+        margin-right: 18px ;
+    }
+    .isotope-grid .isotope-main.spacing-xl .isotope-item{
+        margin-top: 22px;
+    }
+    .isotope-grid .isotope-main.spacing-xl .isotope-item [class*="dg-imagebox"],
+    .isotope-grid .isotope-main.spacing-xl .isotope-item [class*="dg-post-box"],
+    .isotope-grid .isotope-main.spacing-xl .isotope-item .dg-content{
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+}
+@media only screen and (max-width: 991px){
+    .isotope-grid .isotope-main.spacing-xl{
+        /* 36*0.5 */
+        margin-top: -18px;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .isotope-grid .isotope-main.spacing-xl.bothmargins,
+    .box-full-width .isotope-grid .isotope-main.spacing-xl{
+        margin-left: 10px ;
+        margin-right: 10px ;
+    }
+    .isotope-grid .isotope-main.spacing-xl .isotope-item{
+        margin-top: 18px;
+    }
+    .isotope-grid .isotope-main.spacing-xl .isotope-item [class*="dg-imagebox"],
+    .isotope-grid .isotope-main.spacing-xl .isotope-item [class*="dg-post-box"],
+    .isotope-grid .isotope-main.spacing-xl .isotope-item .dg-content{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+.isotope-grid .isotope-console{
+    margin-right: auto;
+    margin-left: auto;
+}
+@media only screen and  (max-width: 991px) {
+    .isotope-grid .isotope-group,
+    .isotope-grid .sort-btn{
+      display: none!important;
+    }
+}
+
+
+[class|=isotope-list] article{
+	display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */  
+	display: -moz-box; /* Firefox 17- */  
+	display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */  
+	display: -moz-flex; /* Firefox 18+ */  
+	display: -ms-flexbox; /* IE 10 */  
+	display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */  
+
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap
+}
+[class|=isotope-list].size-xs .title{
+	font-size: 16px;
+}
+[class|=isotope-list].size-sm .title{
+	font-size: 18px;
+}
+[class|=isotope-list].size-md .title{
+	font-size: 20px;
+}
+[class|=isotope-list].size-lg .title{
+	font-size: 24px;
+}
+[class|=isotope-list].size-xl .title{
+	font-size: 28px;
+}
+
+[class|=isotope-list] article.spacing-no,
+.isotope-type-list .spacing-no article{
+	margin-bottom: 0;
+}
+[class|=isotope-list] article.spacing-sm,
+.isotope-type-list .spacing-sm article{
+	margin-bottom: 12px;
+}
+[class|=isotope-list] article.spacing-md,
+.isotope-type-list .spacing-md article{
+	margin-bottom: 24px;
+}
+[class|=isotope-list] article.spacing-lg,
+.isotope-type-list .spacing-lg article{
+	margin-bottom: 36px;
+}
+[class|=isotope-list] article.spacing-xl,
+.isotope-type-list .spacing-xl article{
+	margin-bottom: 60px;
+}
+[class|=isotope-list] article.spacing-xl:first-child,
+.isotope-type-list .spacing-xl article:first-child{
+	margin-top: 0px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+	[class|=isotope-list] article.spacing-sm,
+  .isotope-type-list .spacing-sm article{
+		margin-bottom: 8px;
+	}
+	[class|=isotope-list] article.spacing-md,
+  .isotope-type-list .spacing-md article{
+		margin-bottom: 15px;
+	}
+	[class|=isotope-list] article.spacing-lg,
+  .isotope-type-list .spacing-lg article{
+		margin-bottom: 22px;
+	}
+	[class|=isotope-list] article.spacing-xl,
+  .isotope-type-list .spacing-xl article{
+		margin-bottom: 36px;
+	}
+}
+@media only screen and (max-width: 991px){
+	[class|=isotope-list] article.spacing-sm,
+  .isotope-type-list .spacing-sm article{
+		margin-bottom: 6px;
+	}
+	[class|=isotope-list] article.spacing-md,
+  .isotope-type-list article.spacing-md{
+		margin-bottom: 12px;
+	}
+	[class|=isotope-list] article.spacing-lg,
+  .isotope-type-list .spacing-lg article{
+		margin-bottom: 18px;
+	}
+	[class|=isotope-list] article.spacing-xl,
+  .isotope-type-list .spacing-xl article{
+		margin-bottom: 30px;
+	}
+}
+[class|=isotope-list] article:first-child{
+	margin-top: 0!important;
+}
+.isotope-list-cross article:nth-child(even){
+	flex-direction: row-reverse;
+}
+.isotope-list-vertical article{
+  display: block;
+	flex-direction: column;
+}
+[class|=isotope-list] article .portfolio-list-img{
+	width: 65%;
+}
+[class|=isotope-list] article .portfolio-list-img img{
+	width: 100%;
+}
+[class|=isotope-list] article .portfolio-list-box{
+	width: 32%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.isotope-list-vertical article .portfolio-list-img{
+  width: 100%;
+  height: 100%;
+}
+.isotope-list-vertical article .portfolio-list-img img{
+	width: 100%;
+}
+.isotope-list-vertical article .portfolio-list-box{
+	width: 100%;
+	padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+
+@media only screen and (max-width: 991px){
+	[class|=isotope-list] article{
+		display: block;
+	}
+	[class|=isotope-list] article .portfolio-list-img{
+		width: 100%;
+	}
+	[class|=isotope-list] article .portfolio-list-box{
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+@media only screen and (max-width: 991px){
+	[class|=isotope-list] article .portfolio-list-box{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+[class|=isotope-list] article .portfolio-list-box .info a{
+	font-size: 12px;
+	font-style: italic;
+	color: #333;
+}
+[class|=isotope-list] article .portfolio-list-box.color-light .info a{
+	color: #f5f5f5;
+}
+
+[class|=isotope-list] article .portfolio-list-box .title a:link,
+[class|=isotope-list] article .portfolio-list-box .title a:active,
+[class|=isotope-list] article .portfolio-list-box .title a:visited{
+  text-decoration: none;
+  color: #333333;
+}
+[class|=isotope-list] article .portfolio-list-box.color-light .title a:link,
+[class|=isotope-list] article .portfolio-list-box.color-light .title a:active,
+[class|=isotope-list] article .portfolio-list-box.color-light .title a:visited{
+  color: #fff;
+}
+[class|=isotope-list] article .portfolio-list-box .description{
+	position: relative;
+	padding-left: 65px;
+	color: #666;
+}
+[class|=isotope-list] article .portfolio-list-box.color-light .description{
+	color: #f5f5f5;
+}
+.isotope-list-vertical article .portfolio-list-box .portfolio-list-text{
+  position: relative;
+	padding-left: 54px;
+}
+.isotope-list-vertical article .portfolio-list-box .description{
+  padding-left: 0;
+}
+.portfolio-list-text .info{
+  margin-bottom: 8px;
+}
+[class|=isotope-list] article .portfolio-list-box .description::before{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 8px;
+	width: 46px;
+	height: 0;
+	border-bottom: 1px solid #ebebeb;
+}
+[class|=isotope-list] article .portfolio-list-box .description::after{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 13px;
+	width: 36px;
+	height: 0;
+	border-bottom: 1px solid #ebebeb;
+}
+.isotope-list-vertical article .portfolio-list-box .portfolio-list-text::before{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: -30px;
+	width: 0;
+  height: -moz-calc( 100% + 30px );
+	height: -webkit-calc( 100% + 30px );
+	height: calc( 100% + 30px );
+	border-left: 1px solid #ebebeb;
+}
+.isotope-list-vertical article .portfolio-list-box .portfolio-list-text::after{
+	content: '';
+	position: absolute;
+	left: 10px;
+	top: -30px;
+	width: 0;
+  height: -moz-calc( 80% + 30px );
+	height: -webkit-calc( 80% + 30px );
+	height: calc( 80% + 30px );
+	border-left: 1px solid #ebebeb;
+}
+.isotope-list-vertical article .portfolio-list-box .description::before{
+	width: 0;
+	height: 0;
+	border: 0;
+}
+.isotope-list-vertical article .portfolio-list-box .description::after{
+	width: 0;
+	height: 0;
+	border: 0;
+}
+@media only screen and (max-width: 991px){
+  .isotope-list-vertical article .portfolio-list-box .portfolio-list-text{
+    padding-left: 24px;
+  }
+  .isotope-list-vertical article .portfolio-list-box .portfolio-list-text::before{
+    top: -10px;
+    height: -moz-calc( 100% + 10px );
+    height: -webkit-calc( 100% + 10px );
+    height: calc( 100% + 10px );
+  }
+  .isotope-list-vertical article .portfolio-list-box .portfolio-list-text::after{
+    top: -10px;
+    height: -moz-calc( 80% + 10px );
+    height: -webkit-calc( 80% + 10px );
+    height: calc( 80% + 10px );
+  }
+}
+
+
+
+.isotope-grid .isotope-main.spacing-sm .isotope-item .dg-imagebox09 .pic.shadow{
+  box-shadow: 0px 0px 3px rgba(0,0,0,0.2);
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+  .isotope-grid .isotope-main.spacing-sm .isotope-item .dg-imagebox09 .pic.shadow{
+      box-shadow: 0px 0px 2px rgba(0,0,0,0.2);
+  }
+}
+@media only screen and (max-width: 991px){
+  .isotope-grid .isotope-main.spacing-sm .isotope-item .dg-imagebox09 .pic.shadow{
+      box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+  }
+}
+.isotope-grid .isotope-main.spacing-md .isotope-item .dg-imagebox09 .pic.shadow{
+  box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+  .isotope-grid .isotope-main.spacing-md .isotope-item .dg-imagebox09 .pic.shadow{
+      box-shadow: 0px 0px 7px rgba(0,0,0,0.2);
+  }
+}
+@media only screen and (max-width: 991px){
+  .isotope-grid .isotope-main.spacing-md .isotope-item .dg-imagebox09 .pic.shadow{
+      box-shadow: 0px 0px 6px rgba(0,0,0,0.2);
+  }
+}
+.isotope-grid .isotope-main.spacing-lg .isotope-item .dg-imagebox09 .pic.shadow{
+  box-shadow: 0px 0px 18px rgba(0,0,0,0.2);
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+  .isotope-grid .isotope-main.spacing-lg .isotope-item .dg-imagebox09 .pic.shadow{
+      box-shadow: 0px 0px 11px rgba(0,0,0,0.2);
+  }
+}
+@media only screen and (max-width: 991px){
+  .isotope-grid .isotope-main.spacing-lg .isotope-item .dg-imagebox09 .pic.shadow{
+      box-shadow: 0px 0px 9px rgba(0,0,0,0.2);
+  }
+}
+.isotope-grid .isotope-main.spacing-xl .isotope-item .dg-imagebox09 .pic.shadow{
+  box-shadow: 0px 0px 25px rgba(0,0,0,0.2);
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+  .isotope-grid .isotope-main.spacing-xl .isotope-item .dg-imagebox09 .pic.shadow{
+      box-shadow: 0px 0px 18px rgba(0,0,0,0.2);
+  }
+}
+@media only screen and (max-width: 991px){
+  .isotope-grid .isotope-main.spacing-xl .isotope-item .dg-imagebox09 .pic.shadow{
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  }
+}
+
+
+@media print{
+	.isotope-effect-fade-in .isotope-item, 
+	.isotope-effect-move-up .isotope-item, 
+	.isotope-effect-scale-up .isotope-item, 
+	.isotope-effect-fall-perspective .isotope-item > div, 
+	.isotope-effect-fly .isotope-item > div, 
+	.isotope-effect-flip .isotope-item > div, 
+	.isotope-effect-helix .isotope-item > div, 
+	.isotope-effect-scale .isotope-item > div{
+		opacity: 1;
+	}
+}
+

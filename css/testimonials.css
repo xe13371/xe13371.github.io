@@ -1,0 +1,1160 @@
+/*
+
+	.swiper-container -> dg-testimonials%s { Style } 01 / 04 / 07 / 08 / 13 / 14 / 15 / 16 / 17 / 18 / 11
+
+	结构 1 
+	dg-testimonials01
+	dg-testimonials07
+	dg-testimonials13
+	dg-testimonials14
+	dg-testimonials15
+	dg-testimonials16
+	dg-testimonials18 
+
+	结构 2
+    dg-testimonials04
+
+	结构 3
+	dg-testimonials08
+	
+	结构 4
+	dg-testimonials17
+	
+	结构 5
+    dg-testimonials11
+*/
+
+
+/* testimonials */
+[class *= "dg-testimonials"] .swiper-slide>.item{
+	padding-left: 1px;
+	padding-right: 1px;
+}
+[class *= "dg-testimonials"] blockquote{
+	/* font-family:"Droid Serif"; */
+	padding:0;
+}
+[class *= "dg-testimonials"] blockquote p{
+	line-height:  inherit;
+}
+[class *= "dg-testimonials"] .pic{
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: middle;
+	border-radius:50%;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+}
+[class *= "dg-testimonials"] .pic img{
+    width:100%;
+	max-width: 100%;
+	border-radius:50%;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+}
+[class *= "dg-testimonials"] cite{
+	display:block;
+	font-size:14px;
+	font-style: italic;
+}
+[class *= "dg-testimonials"] blockquote .info{
+	display:inline-block;
+	font-size:16px;  
+	vertical-align:middle;
+	font-style:normal;
+	text-align:left;
+}
+[class *= "dg-testimonials"] blockquote footer{
+	text-align: center;
+	font-size: 16px;
+	line-height: 1.7;
+	padding: 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+[class *= "dg-testimonials"].color-light p,
+[class *= "dg-testimonials"].color-light .info cite{
+	color:#f5f5f5;
+} 
+[class *= "dg-testimonials"].color-light .info{
+	color:#FFF;
+}
+
+
+[class *= "dg-testimonials"].color-dark p,
+[class *= "dg-testimonials"].color-dark .info cite{
+	color:#666666;
+}
+[class *= "dg-testimonials"].color-dark .info{
+	color:#333333;
+}
+
+
+
+
+.dg-testimonials01 {
+   text-align:center;
+   padding:0;
+   margin-bottom: 20px;
+}
+.dg-testimonials01 img {
+    width: 100%;
+}
+.dg-testimonials01 blockquote{
+  position:relative;
+  font-style:normal;
+  color:inherit;
+  line-height:2;
+}
+.dg-testimonials01 blockquote p{
+    font-weight: normal;
+    font-style:italic;
+    position: relative;
+    text-indent: inherit;
+    font-size: 16px;
+}
+.dg-testimonials01 blockquote footer{
+    color: #666666;
+    margin:34px 0 0;
+}
+.dg-testimonials01 blockquote footer:before{
+	content:normal;
+}
+.dg-testimonials01 blockquote .pic{
+    margin: 0 14px 0 auto;
+	padding:2px;
+	border:1px solid #d8d8d8;
+	max-width:200px;
+}
+.dg-testimonials01 blockquote .info{
+	color:#333333;
+}
+.dg-testimonials01 blockquote .info cite{
+	color:#666666;
+	font-weight:normal;
+}
+
+
+.dg-testimonials01 .item:before{
+	content: "";
+    /* font-family:"Droid Serif";  */
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+	color:#e5e4e4;
+	font-size:130px;
+	display:inline-block;
+	margin-bottom: 20px;
+    line-height: 98px;
+    overflow: hidden;
+	height: 42px;
+	width: 58px;
+	background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20viewBox%3D%220%200%2040%2040%22%20enable-background%3D%22new%200%200%2040%2040%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20fill%3D%22%23e5e4e4%22%20d%3D%22M18.349%2C8.17c-1.75%2C1.002-3.161%2C1.866-4.242%2C2.589s-2.177%2C1.681-3.293%2C2.864c-1.041%2C1.113-1.841%2C2.284-2.399%2C3.507c-0.559%2C1.223-0.949%2C2.801-1.173%2C4.727h2.679c2.306%2C0%2C4.121%2C0.564%2C5.444%2C1.703c1.32%2C1.135%2C1.98%2C2.799%2C1.98%2C4.995c0%2C1.563-0.584%2C3.021-1.76%2C4.38c-1.173%2C1.359-2.781%2C2.035-4.827%2C2.035c-3.201%2C0-5.489-1.047-6.866-3.145c-1.379-2.098-2.065-4.859-2.065-8.273c0-2.415%2C0.523-4.617%2C1.563-6.601c1.044-1.986%2C2.308-3.761%2C3.795-5.322c1.526-1.596%2C3.146-2.952%2C4.856-4.067c1.71-1.117%2C3.146-2.024%2C4.298-2.73L18.349%2C8.17zM39%2C8.17c-1.754%2C1.002-3.165%2C1.866-4.245%2C2.589c-1.076%2C0.723-2.174%2C1.681-3.29%2C2.864c-1.08%2C1.15-1.891%2C2.326-2.429%2C3.533c-0.539%2C1.203-0.919%2C2.771-1.144%2C4.701h2.68c2.309%2C0%2C4.124%2C0.564%2C5.443%2C1.703c1.325%2C1.135%2C1.98%2C2.799%2C1.98%2C4.995c0%2C1.563-0.586%2C3.021-1.757%2C4.38c-1.172%2C1.359-2.783%2C2.035-4.827%2C2.035c-3.198%2C0-5.491-1.047-6.866-3.145c-1.376-2.098-2.063-4.859-2.063-8.273c0-2.415%2C0.518-4.617%2C1.562-6.601c1.041-1.986%2C2.307-3.761%2C3.796-5.322c1.529-1.596%2C3.142-2.952%2C4.855-4.067c1.71-1.117%2C3.143-2.024%2C4.295-2.73L39%2C8.17z%22%2F%3E%3C%2Fsvg%3E');
+	background-size: 100% 100%;
+
+}
+.dg-testimonials01.color-light .item:before{
+	color: #f5f5f5;
+	background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20viewBox%3D%220%200%2040%2040%22%20enable-background%3D%22new%200%200%2040%2040%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20fill%3D%22%23f5f5f5%22%20d%3D%22M18.349%2C8.17c-1.75%2C1.002-3.161%2C1.866-4.242%2C2.589s-2.177%2C1.681-3.293%2C2.864c-1.041%2C1.113-1.841%2C2.284-2.399%2C3.507c-0.559%2C1.223-0.949%2C2.801-1.173%2C4.727h2.679c2.306%2C0%2C4.121%2C0.564%2C5.444%2C1.703c1.32%2C1.135%2C1.98%2C2.799%2C1.98%2C4.995c0%2C1.563-0.584%2C3.021-1.76%2C4.38c-1.173%2C1.359-2.781%2C2.035-4.827%2C2.035c-3.201%2C0-5.489-1.047-6.866-3.145c-1.379-2.098-2.065-4.859-2.065-8.273c0-2.415%2C0.523-4.617%2C1.563-6.601c1.044-1.986%2C2.308-3.761%2C3.795-5.322c1.526-1.596%2C3.146-2.952%2C4.856-4.067c1.71-1.117%2C3.146-2.024%2C4.298-2.73L18.349%2C8.17zM39%2C8.17c-1.754%2C1.002-3.165%2C1.866-4.245%2C2.589c-1.076%2C0.723-2.174%2C1.681-3.29%2C2.864c-1.08%2C1.15-1.891%2C2.326-2.429%2C3.533c-0.539%2C1.203-0.919%2C2.771-1.144%2C4.701h2.68c2.309%2C0%2C4.124%2C0.564%2C5.443%2C1.703c1.325%2C1.135%2C1.98%2C2.799%2C1.98%2C4.995c0%2C1.563-0.586%2C3.021-1.757%2C4.38c-1.172%2C1.359-2.783%2C2.035-4.827%2C2.035c-3.198%2C0-5.491-1.047-6.866-3.145c-1.376-2.098-2.063-4.859-2.063-8.273c0-2.415%2C0.518-4.617%2C1.562-6.601c1.041-1.986%2C2.307-3.761%2C3.796-5.322c1.529-1.596%2C3.142-2.952%2C4.855-4.067c1.71-1.117%2C3.143-2.024%2C4.295-2.73L39%2C8.17z%22%2F%3E%3C%2Fsvg%3E');
+}
+.dg-testimonials01.color-white blockquote .info{
+	color:#ffffff;
+}
+.dg-testimonials01.color-white blockquote .info cite{
+	color:#ffffff;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+	.dg-testimonials01 blockquote p{
+		font-size: 14px;
+	}
+
+}
+
+.dg-testimonials04{
+	margin-bottom: 20px;
+}
+.dg-testimonials04 blockquote{
+  position:relative;
+  font-style:normal;
+  color:inherit;
+  line-height:2;
+  text-align:center;
+}
+.dg-testimonials04 blockquote p{
+    font-weight: normal;
+    font-style:italic;
+    position: relative;
+    text-indent: inherit;
+	font-size: 15px;
+	line-height:2;
+}
+.dg-testimonials04 blockquote .info{
+	text-align: center;
+}
+.dg-testimonials04 blockquote footer{
+    color: #666666;
+    margin:34px 0 0;
+}
+.dg-testimonials04 blockquote footer:before{
+	content:normal;
+}
+.dg-testimonials04 blockquote .pic{
+    margin: 0 auto 25px;
+	padding:2px;
+	border:1px solid #d8d8d8;
+	max-width:200px;
+}
+
+.dg-testimonials04 blockquote footer{
+	font-style:normal;
+	color:#333333;
+}
+.dg-testimonials04 blockquote footer cite{
+	color:#666666;
+	font-weight:normal;
+}
+
+
+.dg-testimonials04.color-white blockquote footer,
+.dg-testimonials04.color-white blockquote footer cite{
+	color:#FFF;
+}
+
+
+@media only screen and (max-width: 767px) {
+	.dg-testimonials04 blockquote p{
+		font-size: 14px;
+	}
+
+}
+
+.dg-testimonials07{
+	margin-bottom: 20px;
+}
+.dg-testimonials07 .swiper-slide>.item{
+	padding:75px 65px;
+	text-align:center;
+	margin:30px;
+	opacity:0.5;
+}
+.dg-testimonials07 .pic{
+	margin-right:20px;
+	border:1px solid #d5d5d5;
+	padding:2px;
+}
+.dg-testimonials07 .pic img{
+	width:auto;
+	display:inline-block;
+}
+.dg-testimonials07 blockquote,
+.dg-testimonials07 blockquote p{
+	text-indent:0;
+	font-size:inherit;
+	margin:0;
+	color:#666666;
+}
+.dg-testimonials07 blockquote p{
+	/* font-family:"Droid Serif";  */
+}
+.dg-testimonials07 blockquote footer:before{
+	content:"";
+}
+
+.dg-testimonials07 blockquote footer{
+	width: 100%;
+	margin-top:35px;
+}
+.dg-testimonials07 .info{
+	color:#424242;
+}
+.dg-testimonials07 .info cite{
+	color:#666666;
+	margin-top:2px;
+}
+
+.dg-testimonials07 .swiper-slide-active .item{
+	opacity:1;
+	box-shadow:0 0 30px rgba(0,0,0,0.1);	
+	-moz-box-shadow:0 0 30px rgba(0,0,0,0.1); 	
+	-webkit-box-shadow:0 0 30px rgba(0,0,0,0.1);
+}
+
+
+@media only screen and (max-width:1199px){
+	.dg-testimonials07 .swiper-slide>.item{
+		padding:65px 30px;
+	}
+}
+@media only screen and (max-width: 991px) {
+	.dg-testimonials07 .item{
+		padding:20px;
+		margin:10px;
+	}
+	.dg-testimonials07 .swiper-slide>.item{
+		padding:55px 30px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.dg-testimonials07 .swiper-slide>.item{
+		padding:40px 30px;
+	}
+}
+
+
+.dg-testimonials08{
+	margin-bottom: 20px;
+}
+.dg-testimonials08 .pic{
+	margin-bottom:22px;
+	width:70px;
+	height:70px;
+	border:2px solid #ffffff;
+	background-color:#ffffff;
+	transition: 		all ease-in 200ms;
+	-moz-transition: 	all ease-in 200ms; /* Firefox 4 */
+	-webkit-transition: all ease-in 200ms; /* Safari and Chrome */
+	-o-transition: 		all ease-in 200ms; /* Opera */
+	-ms-transition: 	all ease-in 200ms; /* IE9? */
+	/* vertical-align: middle; no middle */
+}
+
+.dg-testimonials08 .item {
+	margin:0px 10% 0px;
+	transition: 		margin ease-in 200ms;
+	-moz-transition: 	margin ease-in 200ms; /* Firefox 4 */
+	-webkit-transition: margin ease-in 200ms; /* Safari and Chrome */
+	-o-transition: 		margin ease-in 200ms; /* Opera */
+	-ms-transition: 	margin ease-in 200ms; /* IE9? */
+}
+.dg-testimonials08 blockquote{
+	margin:0;
+	color:#424242;
+	text-align:center;
+	font-size:14px;
+}
+.dg-testimonials08 blockquote p{
+	font-size:inherit;
+	text-indent:0;
+}
+.dg-testimonials08 blockquote .info{
+	text-align: center;
+}
+.dg-testimonials08 blockquote footer{
+	margin-top:28px;
+	color:inherit;
+	font-style:normal;
+}
+.dg-testimonials08 blockquote footer cite{
+	margin-bottom:5px;
+	transition: 		all ease-in 200ms;
+	-moz-transition: 	all ease-in 200ms; /* Firefox 4 */
+	-webkit-transition: all ease-in 200ms; /* Safari and Chrome */
+	-o-transition: 		all ease-in 200ms; /* Opera */
+	-ms-transition: 	all ease-in 200ms; /* IE9? */
+}
+.dg-testimonials08 footer:before{
+	content:normal;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+
+	.dg-testimonials08 .item {
+		margin:25px 0 30px;
+	}
+}
+
+.dg-testimonials11 blockquote{
+	padding:20px 50px 0;
+	margin:0;
+	color:#666666;
+	text-align:center;
+	font-size:16px;
+}
+.dg-testimonials11 blockquote:before{
+	content: " ";
+    /* font-family:"Droid Serif";  */
+	speak: none;
+	
+	font-size:90px;
+	display:inline-block;
+	opacity:0.1;
+	position:absolute;
+	left:15px;
+	top:0;
+	line-height:1;
+	width: 60px;
+	height: 40px;
+	color:#666666;
+	background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20viewBox%3D%220%200%2040%2040%22%20enable-background%3D%22new%200%200%2040%2040%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20fill%3D%22%23666666%22%20d%3D%22M18.349%2C8.17c-1.75%2C1.002-3.161%2C1.866-4.242%2C2.589s-2.177%2C1.681-3.293%2C2.864c-1.041%2C1.113-1.841%2C2.284-2.399%2C3.507c-0.559%2C1.223-0.949%2C2.801-1.173%2C4.727h2.679c2.306%2C0%2C4.121%2C0.564%2C5.444%2C1.703c1.32%2C1.135%2C1.98%2C2.799%2C1.98%2C4.995c0%2C1.563-0.584%2C3.021-1.76%2C4.38c-1.173%2C1.359-2.781%2C2.035-4.827%2C2.035c-3.201%2C0-5.489-1.047-6.866-3.145c-1.379-2.098-2.065-4.859-2.065-8.273c0-2.415%2C0.523-4.617%2C1.563-6.601c1.044-1.986%2C2.308-3.761%2C3.795-5.322c1.526-1.596%2C3.146-2.952%2C4.856-4.067c1.71-1.117%2C3.146-2.024%2C4.298-2.73L18.349%2C8.17zM39%2C8.17c-1.754%2C1.002-3.165%2C1.866-4.245%2C2.589c-1.076%2C0.723-2.174%2C1.681-3.29%2C2.864c-1.08%2C1.15-1.891%2C2.326-2.429%2C3.533c-0.539%2C1.203-0.919%2C2.771-1.144%2C4.701h2.68c2.309%2C0%2C4.124%2C0.564%2C5.443%2C1.703c1.325%2C1.135%2C1.98%2C2.799%2C1.98%2C4.995c0%2C1.563-0.586%2C3.021-1.757%2C4.38c-1.172%2C1.359-2.783%2C2.035-4.827%2C2.035c-3.198%2C0-5.491-1.047-6.866-3.145c-1.376-2.098-2.063-4.859-2.063-8.273c0-2.415%2C0.518-4.617%2C1.562-6.601c1.041-1.986%2C2.307-3.761%2C3.796-5.322c1.529-1.596%2C3.142-2.952%2C4.855-4.067c1.71-1.117%2C3.143-2.024%2C4.295-2.73L39%2C8.17z%22%2F%3E%3C%2Fsvg%3E');
+	background-size: 100% 100%;
+
+}
+.dg-testimonials11 blockquote p{
+	font-size:inherit;
+	text-indent:0;
+	font-style:normal;
+}
+.dg-testimonials11 blockquote footer{
+	margin-top:28px;
+	color:inherit;
+	font-size:16px;
+	font-style:normal;
+	color:#424242;
+}
+.dg-testimonials11 blockquote footer cite{
+	display:block;
+	font-size:14px;
+	margin-bottom:5px;
+	color:#666666;
+	transition: 		all ease-in 200ms;
+	-moz-transition: 	all ease-in 200ms; /* Firefox 4 */
+	-webkit-transition: all ease-in 200ms; /* Safari and Chrome */
+	-o-transition: 		all ease-in 200ms; /* Opera */
+	-ms-transition: 	all ease-in 200ms; /* IE9? */
+}
+.dg-testimonials11 footer:before{
+	content:normal;
+}
+.dg-testimonials11 footer .info{
+  text-align: center;
+}
+
+.dg-testimonials13 {
+   text-align:center;
+   padding:0;
+   margin-bottom: 20px;
+}
+.dg-testimonials13 blockquote{
+  position:relative;
+  font-style:normal;
+  color:inherit;
+  line-height:2;
+
+}
+.dg-testimonials13 blockquote p{
+    font-weight: normal;
+    font-style:italic;
+    position: relative;
+    text-indent: inherit;
+    font-size: 14px;
+}
+.dg-testimonials13 blockquote footer{
+    color: #666666;
+    margin:34px 0 0;
+}
+.dg-testimonials13 blockquote footer:before{
+	content:normal;
+}
+.dg-testimonials13 blockquote .pic{
+    margin: 0 auto 8px;
+	padding:2px;
+	border:1px solid #d8d8d8;
+	max-width:200px;
+}
+.dg-testimonials13 blockquote .info{
+	display:block;
+	text-align:center;
+	color:#333333;
+}
+.dg-testimonials13 blockquote .info cite{
+	color:#666666;
+	font-weight:normal;
+}
+
+.dg-testimonials13 .item:before{
+	content: " ";
+    /* font-family:"Droid Serif";  */
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+	color:#e5e4e4;
+	font-size:130px;
+	display:inline-block;
+	margin-bottom: 20px;
+    line-height: 98px;
+    overflow: hidden;
+	height: 42px;
+	width: 58px;
+	background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20viewBox%3D%220%200%2040%2040%22%20enable-background%3D%22new%200%200%2040%2040%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20fill%3D%22%23e5e4e4%22%20d%3D%22M18.349%2C8.17c-1.75%2C1.002-3.161%2C1.866-4.242%2C2.589s-2.177%2C1.681-3.293%2C2.864c-1.041%2C1.113-1.841%2C2.284-2.399%2C3.507c-0.559%2C1.223-0.949%2C2.801-1.173%2C4.727h2.679c2.306%2C0%2C4.121%2C0.564%2C5.444%2C1.703c1.32%2C1.135%2C1.98%2C2.799%2C1.98%2C4.995c0%2C1.563-0.584%2C3.021-1.76%2C4.38c-1.173%2C1.359-2.781%2C2.035-4.827%2C2.035c-3.201%2C0-5.489-1.047-6.866-3.145c-1.379-2.098-2.065-4.859-2.065-8.273c0-2.415%2C0.523-4.617%2C1.563-6.601c1.044-1.986%2C2.308-3.761%2C3.795-5.322c1.526-1.596%2C3.146-2.952%2C4.856-4.067c1.71-1.117%2C3.146-2.024%2C4.298-2.73L18.349%2C8.17zM39%2C8.17c-1.754%2C1.002-3.165%2C1.866-4.245%2C2.589c-1.076%2C0.723-2.174%2C1.681-3.29%2C2.864c-1.08%2C1.15-1.891%2C2.326-2.429%2C3.533c-0.539%2C1.203-0.919%2C2.771-1.144%2C4.701h2.68c2.309%2C0%2C4.124%2C0.564%2C5.443%2C1.703c1.325%2C1.135%2C1.98%2C2.799%2C1.98%2C4.995c0%2C1.563-0.586%2C3.021-1.757%2C4.38c-1.172%2C1.359-2.783%2C2.035-4.827%2C2.035c-3.198%2C0-5.491-1.047-6.866-3.145c-1.376-2.098-2.063-4.859-2.063-8.273c0-2.415%2C0.518-4.617%2C1.562-6.601c1.041-1.986%2C2.307-3.761%2C3.796-5.322c1.529-1.596%2C3.142-2.952%2C4.855-4.067c1.71-1.117%2C3.143-2.024%2C4.295-2.73L39%2C8.17z%22%2F%3E%3C%2Fsvg%3E');	
+	background-size: 100% 100%;
+}
+.dg-testimonials13.color-light .item:before{
+	color: #ffffff;
+	background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20viewBox%3D%220%200%2040%2040%22%20enable-background%3D%22new%200%200%2040%2040%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M18.349%2C8.17c-1.75%2C1.002-3.161%2C1.866-4.242%2C2.589s-2.177%2C1.681-3.293%2C2.864c-1.041%2C1.113-1.841%2C2.284-2.399%2C3.507c-0.559%2C1.223-0.949%2C2.801-1.173%2C4.727h2.679c2.306%2C0%2C4.121%2C0.564%2C5.444%2C1.703c1.32%2C1.135%2C1.98%2C2.799%2C1.98%2C4.995c0%2C1.563-0.584%2C3.021-1.76%2C4.38c-1.173%2C1.359-2.781%2C2.035-4.827%2C2.035c-3.201%2C0-5.489-1.047-6.866-3.145c-1.379-2.098-2.065-4.859-2.065-8.273c0-2.415%2C0.523-4.617%2C1.563-6.601c1.044-1.986%2C2.308-3.761%2C3.795-5.322c1.526-1.596%2C3.146-2.952%2C4.856-4.067c1.71-1.117%2C3.146-2.024%2C4.298-2.73L18.349%2C8.17zM39%2C8.17c-1.754%2C1.002-3.165%2C1.866-4.245%2C2.589c-1.076%2C0.723-2.174%2C1.681-3.29%2C2.864c-1.08%2C1.15-1.891%2C2.326-2.429%2C3.533c-0.539%2C1.203-0.919%2C2.771-1.144%2C4.701h2.68c2.309%2C0%2C4.124%2C0.564%2C5.443%2C1.703c1.325%2C1.135%2C1.98%2C2.799%2C1.98%2C4.995c0%2C1.563-0.586%2C3.021-1.757%2C4.38c-1.172%2C1.359-2.783%2C2.035-4.827%2C2.035c-3.198%2C0-5.491-1.047-6.866-3.145c-1.376-2.098-2.063-4.859-2.063-8.273c0-2.415%2C0.518-4.617%2C1.562-6.601c1.041-1.986%2C2.307-3.761%2C3.796-5.322c1.529-1.596%2C3.142-2.952%2C4.855-4.067c1.71-1.117%2C3.143-2.024%2C4.295-2.73L39%2C8.17z%22%2F%3E%3C%2Fsvg%3E');
+
+}
+
+
+
+.dg-testimonials13.color-white blockquote .info,
+.dg-testimonials13.color-white blockquote .info cite{
+	color:#FFF;
+}
+.dg-testimonials13.color-white .item:before{
+	opacity:0.3
+}
+@media only screen and (max-width: 767px) {
+	.dg-testimonials13 blockquote p{
+		font-size: 14px;
+	}
+
+}
+
+.dg-testimonials14 {
+   text-align:center;
+   padding:0;
+   margin-bottom: 20px;
+}
+.dg-testimonials14 img {
+    width: 100%;
+}
+.dg-testimonials14 blockquote{
+  position:relative;
+  font-style:normal;
+  color:inherit;
+  line-height:2;
+}
+.dg-testimonials14 blockquote p{
+    font-weight: normal;
+    font-style:italic;
+    position: relative;
+    text-indent: inherit;
+    font-size: 14px;
+}
+.dg-testimonials14 blockquote footer{
+    color: #666666;
+    margin:34px 0 0;
+}
+.dg-testimonials14 blockquote footer:before{
+	content:normal;
+}
+.dg-testimonials14 blockquote .pic{
+    margin: 0 14px 0 auto;
+	padding:2px;
+	border:1px solid #d8d8d8;
+}
+.dg-testimonials14 blockquote .info{
+	color:#333333;
+}
+.dg-testimonials14 blockquote .info cite{
+	color:#666666;
+	font-weight:normal;
+}
+
+.dg-testimonials14 .item{
+	color: #0f0f0f;
+}
+
+.dg-testimonials14 .item:before{
+	content: " ";
+    /* font-family:"Droid Serif";  */
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+	color:#e5e4e4;
+	font-size:130px;
+	display:inline-block;
+	margin-bottom: 20px;
+    line-height: 98px;
+    overflow: hidden;
+	height: 58px;
+	width: 42px;
+	background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20viewBox%3D%220%200%2040%2040%22%20enable-background%3D%22new%200%200%2040%2040%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20fill%3D%22%23e5e4e4%22%20d%3D%22M18.349%2C8.17c-1.75%2C1.002-3.161%2C1.866-4.242%2C2.589s-2.177%2C1.681-3.293%2C2.864c-1.041%2C1.113-1.841%2C2.284-2.399%2C3.507c-0.559%2C1.223-0.949%2C2.801-1.173%2C4.727h2.679c2.306%2C0%2C4.121%2C0.564%2C5.444%2C1.703c1.32%2C1.135%2C1.98%2C2.799%2C1.98%2C4.995c0%2C1.563-0.584%2C3.021-1.76%2C4.38c-1.173%2C1.359-2.781%2C2.035-4.827%2C2.035c-3.201%2C0-5.489-1.047-6.866-3.145c-1.379-2.098-2.065-4.859-2.065-8.273c0-2.415%2C0.523-4.617%2C1.563-6.601c1.044-1.986%2C2.308-3.761%2C3.795-5.322c1.526-1.596%2C3.146-2.952%2C4.856-4.067c1.71-1.117%2C3.146-2.024%2C4.298-2.73L18.349%2C8.17zM39%2C8.17c-1.754%2C1.002-3.165%2C1.866-4.245%2C2.589c-1.076%2C0.723-2.174%2C1.681-3.29%2C2.864c-1.08%2C1.15-1.891%2C2.326-2.429%2C3.533c-0.539%2C1.203-0.919%2C2.771-1.144%2C4.701h2.68c2.309%2C0%2C4.124%2C0.564%2C5.443%2C1.703c1.325%2C1.135%2C1.98%2C2.799%2C1.98%2C4.995c0%2C1.563-0.586%2C3.021-1.757%2C4.38c-1.172%2C1.359-2.783%2C2.035-4.827%2C2.035c-3.198%2C0-5.491-1.047-6.866-3.145c-1.376-2.098-2.063-4.859-2.063-8.273c0-2.415%2C0.518-4.617%2C1.562-6.601c1.041-1.986%2C2.307-3.761%2C3.796-5.322c1.529-1.596%2C3.142-2.952%2C4.855-4.067c1.71-1.117%2C3.143-2.024%2C4.295-2.73L39%2C8.17z%22%2F%3E%3C%2Fsvg%3E');
+	background-size: 100% 100%;
+}
+.dg-testimonials14.color-light .item:before{
+	color: #f5f5f5;
+	background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20viewBox%3D%220%200%2040%2040%22%20enable-background%3D%22new%200%200%2040%2040%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20fill%3D%22%23f5f5f5%22%20d%3D%22M18.349%2C8.17c-1.75%2C1.002-3.161%2C1.866-4.242%2C2.589s-2.177%2C1.681-3.293%2C2.864c-1.041%2C1.113-1.841%2C2.284-2.399%2C3.507c-0.559%2C1.223-0.949%2C2.801-1.173%2C4.727h2.679c2.306%2C0%2C4.121%2C0.564%2C5.444%2C1.703c1.32%2C1.135%2C1.98%2C2.799%2C1.98%2C4.995c0%2C1.563-0.584%2C3.021-1.76%2C4.38c-1.173%2C1.359-2.781%2C2.035-4.827%2C2.035c-3.201%2C0-5.489-1.047-6.866-3.145c-1.379-2.098-2.065-4.859-2.065-8.273c0-2.415%2C0.523-4.617%2C1.563-6.601c1.044-1.986%2C2.308-3.761%2C3.795-5.322c1.526-1.596%2C3.146-2.952%2C4.856-4.067c1.71-1.117%2C3.146-2.024%2C4.298-2.73L18.349%2C8.17zM39%2C8.17c-1.754%2C1.002-3.165%2C1.866-4.245%2C2.589c-1.076%2C0.723-2.174%2C1.681-3.29%2C2.864c-1.08%2C1.15-1.891%2C2.326-2.429%2C3.533c-0.539%2C1.203-0.919%2C2.771-1.144%2C4.701h2.68c2.309%2C0%2C4.124%2C0.564%2C5.443%2C1.703c1.325%2C1.135%2C1.98%2C2.799%2C1.98%2C4.995c0%2C1.563-0.586%2C3.021-1.757%2C4.38c-1.172%2C1.359-2.783%2C2.035-4.827%2C2.035c-3.198%2C0-5.491-1.047-6.866-3.145c-1.376-2.098-2.063-4.859-2.063-8.273c0-2.415%2C0.518-4.617%2C1.562-6.601c1.041-1.986%2C2.307-3.761%2C3.796-5.322c1.529-1.596%2C3.142-2.952%2C4.855-4.067c1.71-1.117%2C3.143-2.024%2C4.295-2.73L39%2C8.17z%22%2F%3E%3C%2Fsvg%3E');
+}
+
+
+@media only screen and (max-width: 767px) {
+	.dg-testimonials14 blockquote p{
+		font-size: 14px;
+	}
+
+}
+
+.dg-testimonials15 {
+   text-align:left;
+   padding:0;
+   margin-bottom: 20px;
+}
+.dg-testimonials15 img {
+    width: 100%;
+}
+.dg-testimonials15 blockquote{
+  position:relative;
+  margin:0;
+  font-style:normal;
+  color:inherit;
+  line-height:2;
+}
+.dg-testimonials15 blockquote p{
+    font-weight: normal;
+    font-style:italic;
+    position: relative;
+    text-indent: inherit;
+    font-size: 15px;
+	border:1px solid #dcdcdc;
+	background-color:#f9f9f9;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	padding:35px;
+	text-align:left;
+}
+.dg-testimonials15.color-light blockquote p{
+	background-color:rgba(255,255,255,0.1);
+	border-color:rgba(255,255,255,0.1);
+}
+.dg-testimonials15.color-dark blockquote p:after{
+	content:"";
+	position:absolute;
+	top:100%;
+	left:60px;
+	width:8px;
+	height:8px;
+	border-left:1px solid #dcdcdc;
+	border-bottom:1px solid #dcdcdc;
+	background-color:#f9f9f9;
+	transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+	margin-top:-3px;
+}
+.dg-testimonials15.color-light blockquote p:after{
+	content: "";
+    position: absolute;
+	top: 100%;
+    left: 60px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+	border-top: 8px solid rgba(255,255,255,0.15);
+	margin-top: 1px;
+}
+.dg-testimonials15 blockquote footer{
+    color: #666666;
+	margin:17px 0 0 32px;
+	float:left;
+}
+.dg-testimonials15 blockquote footer:before{
+	content:normal;
+}
+.dg-testimonials15 blockquote .pic{
+    margin: 0 14px 0 auto;
+	padding:3px;
+	border:1px solid #d8d8d8;
+}
+.dg-testimonials15 blockquote .info{
+	color:#333333;
+}
+.dg-testimonials15 blockquote .info cite{
+	color:#666666;
+	font-weight:normal;
+}
+
+@media only screen and (max-width: 767px) {
+	.dg-testimonials15 blockquote p{
+		padding:20px;
+	}
+}
+.dg-testimonials16 {
+   text-align:left;
+   padding:0;
+   margin-bottom: 20px;
+}
+.dg-testimonials16 img {
+    width: 100%;
+}
+.dg-testimonials16 blockquote{
+  position:relative;
+  margin:0;
+  font-style:normal;
+  color:inherit;
+  line-height:2;
+  padding:20px;
+}
+.dg-testimonials16 blockquote:before{
+	content: " ";
+    /* font-family:"Droid Serif";  */
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+	color:#e5e4e4;
+	font-size:56px;
+	display:inline-block;
+	margin:30px auto 20px;
+    line-height: 48px;
+    overflow: hidden;
+	height: 24px;
+	width: 25px;
+	position:absolute;
+	left:40px;
+	top:30px;
+	z-index: 1;
+	background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20viewBox%3D%220%200%2040%2040%22%20enable-background%3D%22new%200%200%2040%2040%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20fill%3D%22%23e5e4e4%22%20d%3D%22M18.349%2C8.17c-1.75%2C1.002-3.161%2C1.866-4.242%2C2.589s-2.177%2C1.681-3.293%2C2.864c-1.041%2C1.113-1.841%2C2.284-2.399%2C3.507c-0.559%2C1.223-0.949%2C2.801-1.173%2C4.727h2.679c2.306%2C0%2C4.121%2C0.564%2C5.444%2C1.703c1.32%2C1.135%2C1.98%2C2.799%2C1.98%2C4.995c0%2C1.563-0.584%2C3.021-1.76%2C4.38c-1.173%2C1.359-2.781%2C2.035-4.827%2C2.035c-3.201%2C0-5.489-1.047-6.866-3.145c-1.379-2.098-2.065-4.859-2.065-8.273c0-2.415%2C0.523-4.617%2C1.563-6.601c1.044-1.986%2C2.308-3.761%2C3.795-5.322c1.526-1.596%2C3.146-2.952%2C4.856-4.067c1.71-1.117%2C3.146-2.024%2C4.298-2.73L18.349%2C8.17zM39%2C8.17c-1.754%2C1.002-3.165%2C1.866-4.245%2C2.589c-1.076%2C0.723-2.174%2C1.681-3.29%2C2.864c-1.08%2C1.15-1.891%2C2.326-2.429%2C3.533c-0.539%2C1.203-0.919%2C2.771-1.144%2C4.701h2.68c2.309%2C0%2C4.124%2C0.564%2C5.443%2C1.703c1.325%2C1.135%2C1.98%2C2.799%2C1.98%2C4.995c0%2C1.563-0.586%2C3.021-1.757%2C4.38c-1.172%2C1.359-2.783%2C2.035-4.827%2C2.035c-3.198%2C0-5.491-1.047-6.866-3.145c-1.376-2.098-2.063-4.859-2.063-8.273c0-2.415%2C0.518-4.617%2C1.562-6.601c1.041-1.986%2C2.307-3.761%2C3.796-5.322c1.529-1.596%2C3.142-2.952%2C4.855-4.067c1.71-1.117%2C3.143-2.024%2C4.295-2.73L39%2C8.17z%22%2F%3E%3C%2Fsvg%3E');
+	background-size: 100% 100%;
+}
+.dg-testimonials16.color-light blockquote:before{
+	color: #f5f5f5;
+	background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20viewBox%3D%220%200%2040%2040%22%20enable-background%3D%22new%200%200%2040%2040%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20fill%3D%22%23f5f5f5%22%20d%3D%22M18.349%2C8.17c-1.75%2C1.002-3.161%2C1.866-4.242%2C2.589s-2.177%2C1.681-3.293%2C2.864c-1.041%2C1.113-1.841%2C2.284-2.399%2C3.507c-0.559%2C1.223-0.949%2C2.801-1.173%2C4.727h2.679c2.306%2C0%2C4.121%2C0.564%2C5.444%2C1.703c1.32%2C1.135%2C1.98%2C2.799%2C1.98%2C4.995c0%2C1.563-0.584%2C3.021-1.76%2C4.38c-1.173%2C1.359-2.781%2C2.035-4.827%2C2.035c-3.201%2C0-5.489-1.047-6.866-3.145c-1.379-2.098-2.065-4.859-2.065-8.273c0-2.415%2C0.523-4.617%2C1.563-6.601c1.044-1.986%2C2.308-3.761%2C3.795-5.322c1.526-1.596%2C3.146-2.952%2C4.856-4.067c1.71-1.117%2C3.146-2.024%2C4.298-2.73L18.349%2C8.17zM39%2C8.17c-1.754%2C1.002-3.165%2C1.866-4.245%2C2.589c-1.076%2C0.723-2.174%2C1.681-3.29%2C2.864c-1.08%2C1.15-1.891%2C2.326-2.429%2C3.533c-0.539%2C1.203-0.919%2C2.771-1.144%2C4.701h2.68c2.309%2C0%2C4.124%2C0.564%2C5.443%2C1.703c1.325%2C1.135%2C1.98%2C2.799%2C1.98%2C4.995c0%2C1.563-0.586%2C3.021-1.757%2C4.38c-1.172%2C1.359-2.783%2C2.035-4.827%2C2.035c-3.198%2C0-5.491-1.047-6.866-3.145c-1.376-2.098-2.063-4.859-2.063-8.273c0-2.415%2C0.518-4.617%2C1.562-6.601c1.041-1.986%2C2.307-3.761%2C3.796-5.322c1.529-1.596%2C3.142-2.952%2C4.855-4.067c1.71-1.117%2C3.143-2.024%2C4.295-2.73L39%2C8.17z%22%2F%3E%3C%2Fsvg%3E');
+}
+.dg-testimonials16 blockquote p{
+    font-weight: normal;
+    font-style:italic;
+    position: relative;
+    text-indent: inherit;
+    font-size: 15px;
+	background-color:#fff;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	padding:50px;
+	text-align:left;
+	-webkit-box-shadow: 0 0 20px rgba(0,0,0,0.15);
+	box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+.dg-testimonials16 blockquote p:after{
+	content: "";
+    position: absolute;
+    top: 100%;
+    left: 50px;
+    border: 7px solid transparent;
+    border-top-color: #fff;
+}
+
+
+.dg-testimonials16.color-light blockquote p{
+	background-color:rgba(255,255,255,0.1);
+}
+
+.dg-testimonials16.color-light blockquote p:after{
+	border-top-color: rgba(255,255,255,.1);
+}
+
+
+.dg-testimonials16 blockquote footer{
+    color: #666666;
+	margin:17px 0 0 32px;
+	float:left;
+}
+.dg-testimonials16 blockquote footer:before{
+	content:normal;
+}
+.dg-testimonials16 blockquote .pic{
+    margin: 0 14px 0 auto;
+	padding:3px;
+	border:1px solid #d8d8d8;
+}
+.dg-testimonials16 blockquote .info{
+	color:#333333;
+}
+.dg-testimonials16 blockquote .info cite{
+	color:#666666;
+	font-weight:normal;
+}
+
+
+@media only screen and (max-width: 767px) {
+	.dg-testimonials16 blockquote p{
+		padding:20px;
+	}
+	.dg-testimonials16 blockquote:before{
+		content: none;
+	}
+}
+
+
+
+.dg-testimonials17 {
+   text-align:left;
+   padding:0;
+   margin-bottom: 28px;
+}
+.dg-testimonials17 img {
+    width: 100%;
+}
+.dg-testimonials17 blockquote{
+  position:relative;
+  margin:0;
+  font-style:normal;
+  color:inherit;
+  line-height:2;
+}
+.dg-testimonials17 blockquote p{
+    font-weight: normal;
+    font-style:italic;
+    position: relative;
+    text-indent: inherit;
+    font-size: 15px;
+	border:1px solid #dcdcdc;
+	background-color:#f9f9f9;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	padding:35px;
+	text-align:left;
+	overflow:hidden;
+}
+.dg-testimonials17.color-light blockquote p{
+	background-color:rgba(255,255,255,0.1);
+	border-color:rgba(255,255,255,0.1);
+}
+.dg-testimonials17 blockquote p:before{
+	content:"";
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	border:2px solid #ffffff;
+	position:absolute;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+.dg-testimonials17.color-light blockquote p:before{
+	border-color:rgba(255,255,255,0.1);
+}
+.dg-testimonials17.color-dark blockquote footer:after{
+	content:"";
+	position:absolute;
+	top:32px;
+	right:-4px;
+	width:7px;
+	height:7px;
+	border-left:1px solid #dcdcdc;
+	border-bottom:1px solid #dcdcdc;
+	background-color:#f9f9f9;
+	transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	margin-top:-3px;
+	z-index:3;
+}
+.dg-testimonials17.color-light blockquote footer:after{
+	content: "";
+    position: absolute;
+    top: 32px;
+    right: 0;
+    width: 7px;
+    height: 7px;
+    margin-top: -3px;
+    z-index: 3;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-right: 8px solid rgba(255,255,255,0.15);
+    border-bottom: 6px solid transparent;
+}
+.dg-testimonials17 blockquote footer{
+    color: #666666;
+    margin:0;
+    padding: 0 14px 0 0;
+	float:left;
+	position:relative;
+	max-width:30%;
+}
+.dg-testimonials17 blockquote footer:before{
+	content:normal;
+}
+.dg-testimonials17 blockquote .pic{
+    margin: 0 auto;
+	padding:3px;
+	border:1px solid #d8d8d8;
+	max-width:200px;
+}
+.dg-testimonials17 blockquote .info{
+	display:block;
+	text-align:center;
+	color:#333333;
+}
+.dg-testimonials17 blockquote .info cite{
+	color:#666666;
+	font-weight:normal;
+}
+
+@media only screen and (max-width: 767px) {
+	.dg-testimonials17 blockquote p{
+		padding:20px;
+	}
+}
+
+
+.dg-testimonials18 {
+   text-align:center;
+   padding:0;
+   margin-bottom: 20px;   
+}
+.dg-testimonials18 img {
+    width: 100%;
+}
+.dg-testimonials18 blockquote{
+	position:relative;
+	font-style:normal;
+	color:inherit;
+	line-height:2;
+	letter-spacing:0.05em;
+}
+.dg-testimonials18 blockquote:before{
+	content: " ";
+    /* font-family:"Droid Serif";  */
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+	color:#666666;
+	font-size:56px;
+	display:inline-block;
+	margin:30px auto 20px;
+    line-height: 48px;
+    overflow: hidden;
+	height: 24px;
+	width: 25px;
+	position:absolute;
+	left:25px;
+	top:5px;
+	z-index: 1;
+	background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20viewBox%3D%220%200%2040%2040%22%20enable-background%3D%22new%200%200%2040%2040%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20fill%3D%22%23666666%22%20d%3D%22M18.349%2C8.17c-1.75%2C1.002-3.161%2C1.866-4.242%2C2.589s-2.177%2C1.681-3.293%2C2.864c-1.041%2C1.113-1.841%2C2.284-2.399%2C3.507c-0.559%2C1.223-0.949%2C2.801-1.173%2C4.727h2.679c2.306%2C0%2C4.121%2C0.564%2C5.444%2C1.703c1.32%2C1.135%2C1.98%2C2.799%2C1.98%2C4.995c0%2C1.563-0.584%2C3.021-1.76%2C4.38c-1.173%2C1.359-2.781%2C2.035-4.827%2C2.035c-3.201%2C0-5.489-1.047-6.866-3.145c-1.379-2.098-2.065-4.859-2.065-8.273c0-2.415%2C0.523-4.617%2C1.563-6.601c1.044-1.986%2C2.308-3.761%2C3.795-5.322c1.526-1.596%2C3.146-2.952%2C4.856-4.067c1.71-1.117%2C3.146-2.024%2C4.298-2.73L18.349%2C8.17zM39%2C8.17c-1.754%2C1.002-3.165%2C1.866-4.245%2C2.589c-1.076%2C0.723-2.174%2C1.681-3.29%2C2.864c-1.08%2C1.15-1.891%2C2.326-2.429%2C3.533c-0.539%2C1.203-0.919%2C2.771-1.144%2C4.701h2.68c2.309%2C0%2C4.124%2C0.564%2C5.443%2C1.703c1.325%2C1.135%2C1.98%2C2.799%2C1.98%2C4.995c0%2C1.563-0.586%2C3.021-1.757%2C4.38c-1.172%2C1.359-2.783%2C2.035-4.827%2C2.035c-3.198%2C0-5.491-1.047-6.866-3.145c-1.376-2.098-2.063-4.859-2.063-8.273c0-2.415%2C0.518-4.617%2C1.562-6.601c1.041-1.986%2C2.307-3.761%2C3.796-5.322c1.529-1.596%2C3.142-2.952%2C4.855-4.067c1.71-1.117%2C3.143-2.024%2C4.295-2.73L39%2C8.17z%22%2F%3E%3C%2Fsvg%3E');
+	background-size: 100% 100%;
+
+}
+.dg-testimonials18 blockquote p{
+    font-weight: normal;
+    font-style:italic;
+    position: relative;
+    text-indent: inherit;
+    font-size: 14px;
+	background-color:rgba(255,255,255,0.1);
+	padding:40px 60px;
+	color:#FFF;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	text-align:left;
+}
+.dg-testimonials18.color-dark blockquote p{
+	background-color:#f9f9f9;
+}
+.dg-testimonials18 blockquote p:after{
+	content:"";
+	position:absolute;
+	top:100%;
+	left:50px;
+	border:7px solid transparent;
+	border-top-color:rgba(255,255,255,0.1);
+}
+.dg-testimonials18.color-dark blockquote p:after{
+	border-top-color:#f9f9f9;
+}
+.dg-testimonials18 blockquote .title{
+	display:block;
+	font-size:16px;
+	margin:0px 0px 2px;
+}
+.dg-testimonials18 blockquote footer{
+    text-align: left;
+    color: #ffffff;
+    margin:20px 0 0;
+    padding: 0 0 0 20px;
+    display: block;
+}
+.dg-testimonials18 blockquote footer:before{
+	content:normal;
+}
+.dg-testimonials18 blockquote .pic{
+    margin: 0 20px 0 auto;
+	border:3px solid #ffffff;
+	background-color:#ffffff;
+}
+.dg-testimonials18 blockquote .info{
+	color:#e6e6e6;
+}
+.dg-testimonials18 blockquote .info cite{
+	color:#e6e6e6;
+	font-weight:normal;
+}
+
+@media only screen  and (max-width: 991px) {
+	.dg-testimonials18 blockquote p{
+		padding:30px 30px 30px 50px;
+	}
+	.dg-testimonials18 blockquote:before{
+	    left: 15px;
+		top: 0px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.dg-testimonials18 blockquote p{
+		font-size: 14px;
+	}
+
+}
+
+
+[class *= "dg-testimonials"] blockquote cite:before{
+	display:none;
+}
+
+
+
+
+.dg-testimonials-19 {
+	text-align: center;
+	padding: 0;
+	margin-bottom: 20px;
+}
+
+.dg-testimonials-19 .pic {
+	position: absolute;
+	top: -52px;
+	left: 50%;
+	margin-left: -52px;
+	padding: 2px;
+	background: #fff;
+	max-width: 104px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .3)
+}
+
+.dg-testimonials-19 blockquote {
+	position: relative;
+	font-style: normal;
+	color: inherit;
+	line-height: 2;
+	border: none;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+	border-radius: 3px;
+	padding: 83px 30px 78px;
+	height: 100%;
+}
+
+.dg-testimonials-19 blockquote .title {
+	position: relative;
+	margin-top: 0;
+	margin-bottom: 8px;
+}
+
+.dg-testimonials-19 blockquote .title:before {
+	content: " ";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #f0f0f0;
+	font-size: 56px;
+	display: inline-block;
+	overflow: hidden;
+	height: 36px;
+	width: 40px;
+	position: absolute;
+	left: 50%;
+	top: -15px;
+	margin-left: -20px;
+	z-index: 1;
+	background-image: url('data:image/svg+xml;utf8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20%20viewBox%3D%220%200%2040%2040%22%20enable-background%3D%22new%200%200%2040%2040%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20fill%3D%22%23e5e4e4%22%20d%3D%22M18.349%2C8.17c-1.75%2C1.002-3.161%2C1.866-4.242%2C2.589s-2.177%2C1.681-3.293%2C2.864c-1.041%2C1.113-1.841%2C2.284-2.399%2C3.507c-0.559%2C1.223-0.949%2C2.801-1.173%2C4.727h2.679c2.306%2C0%2C4.121%2C0.564%2C5.444%2C1.703c1.32%2C1.135%2C1.98%2C2.799%2C1.98%2C4.995c0%2C1.563-0.584%2C3.021-1.76%2C4.38c-1.173%2C1.359-2.781%2C2.035-4.827%2C2.035c-3.201%2C0-5.489-1.047-6.866-3.145c-1.379-2.098-2.065-4.859-2.065-8.273c0-2.415%2C0.523-4.617%2C1.563-6.601c1.044-1.986%2C2.308-3.761%2C3.795-5.322c1.526-1.596%2C3.146-2.952%2C4.856-4.067c1.71-1.117%2C3.146-2.024%2C4.298-2.73L18.349%2C8.17zM39%2C8.17c-1.754%2C1.002-3.165%2C1.866-4.245%2C2.589c-1.076%2C0.723-2.174%2C1.681-3.29%2C2.864c-1.08%2C1.15-1.891%2C2.326-2.429%2C3.533c-0.539%2C1.203-0.919%2C2.771-1.144%2C4.701h2.68c2.309%2C0%2C4.124%2C0.564%2C5.443%2C1.703c1.325%2C1.135%2C1.98%2C2.799%2C1.98%2C4.995c0%2C1.563-0.586%2C3.021-1.757%2C4.38c-1.172%2C1.359-2.783%2C2.035-4.827%2C2.035c-3.198%2C0-5.491-1.047-6.866-3.145c-1.376-2.098-2.063-4.859-2.063-8.273c0-2.415%2C0.518-4.617%2C1.562-6.601c1.041-1.986%2C2.307-3.761%2C3.796-5.322c1.529-1.596%2C3.142-2.952%2C4.855-4.067c1.71-1.117%2C3.143-2.024%2C4.295-2.73L39%2C8.17z%22%2F%3E%3C%2Fsvg%3E');
+	background-size: 100% 100%;
+	opacity: 0.5;
+}
+
+.dg-testimonials-19 blockquote .title span {
+	position: relative;
+	font-size: inherit;
+	z-index: 2;
+}
+
+.dg-testimonials-19 blockquote p {
+	font-style: normal;
+	text-indent: initial;
+	font-size: 16px;
+	line-height: 28px;
+	color: #666;
+}
+
+.dg-testimonials-19 blockquote footer {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 23px;
+	padding-bottom: 23px;
+	border-top: 1px solid #ebebeb;
+	align-items: center;
+	position: absolute;
+	margin-left: 30px;
+	margin-right: 30px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.dg-testimonials-19 blockquote footer:before {
+	display: none;
+}
+
+.dg-testimonials-19 blockquote .info {
+	font-size: 18px;
+	margin: 0;
+	line-height: initial;
+}
+
+.dg-testimonials-19 blockquote .stars-list{
+	color: #e3883f;
+}
+.dg-testimonials-19 blockquote .stars-list i{
+	margin-right:5px;
+}
+.dg-testimonials-19 blockquote .stars-list i:last-child{
+	margin-right:0;
+}
+
+
+.dg-testimonials-19 .swiper-wrapper {
+	align-items: stretch;
+}
+
+.dg-testimonials-19 .swiper-slide {
+	height: auto;
+}
+
+.dg-testimonials-19 .swiper-slide>div {
+	height: 100%;
+	padding-top: 60px;
+}
+
+.dg-testimonials-19.style02_nav .swiper-button-prev,
+.dg-testimonials-19.style02_nav .swiper-button-next {
+	border-color: #ececec;
+	opacity: 1;
+	background: none;
+}
+
+.dg-testimonials-19.style02_nav .swiper-button-prev:before,
+.dg-testimonials-19.style02_nav .swiper-button-next:before {
+	border-color: #ececec;
+}
+
+.dg-testimonials-19.style02_nav .swiper-button-prev:hover,
+.dg-testimonials-19.style02_nav .swiper-button-next:hover {
+	opacity: 1;
+	border-color: #c3c3c3;
+}
+
+.dg-testimonials-19.style02_nav .swiper-button-prev:hover:before,
+.dg-testimonials-19.style02_nav .swiper-button-next:hover:before {
+	border-color: #c3c3c3;
+}

@@ -1,0 +1,291 @@
+/*
+
+
+    .time-line -> %s { Style } time-line01 / time-line02
+
+    .time-line01 -> %s { Layout } image-text / image-text-cross / text-image / text-image-cross
+    
+    .time-line02 -> %s { Layout } icon-text
+
+    
+*/
+
+
+
+/* time-line */
+.time-line .icon-svg * {
+	stroke-width: 3px;
+}
+.time-line .title {
+	font-size: 20px;
+	margin: 0 0 5px 0;
+}
+.time-line .title:last-child {
+	margin: 0 0 0 0;
+}
+.time-line .subtitle {
+	font-size: 14px;
+	font-style: italic;
+	margin: 5px 0 20px;
+}
+.time-line .subtitle:first-child {
+	margin: 0 0 20px;
+}
+.time-line .subtitle:last-child {
+	margin: 5px 0 0;
+}
+.time-line .info {
+	font-size: 16px;
+	margin: 20px 0 0 0;
+}
+.time-line .info:first-child {
+	margin: 0 0 0;
+}
+.time-line01 {
+	position: relative;
+}
+.time-line01 .line {
+	content: '';
+	position: absolute;
+	width: 3px;
+	margin-left: -1px;
+	left: 50%;
+	top: 0px;
+	bottom: 0px;
+	z-index: 0;
+	background: -webkit-linear-gradient(#5bcfc8, #7f6df5); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(#5bcfc8, #7f6df5); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(#5bcfc8, #7f6df5); /* Firefox 3.6 - 15 */
+	background: linear-gradient(#5bcfc8, #7f6df5); /* 标准的语法 */
+}
+.time-line01 .item {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.time-line01 .item:first-of-type {
+	padding-top: 0 !important;
+}
+.time-line01 .item:nth-last-child(2) {
+	padding-bottom: 0 !important;
+}
+.image-text.time-line01 .item .pic {
+	text-align: right;
+}
+.image-text.time-line01 .item .text {
+	text-align: left;
+}
+.image-text-cross.time-line01 .item:nth-child(even) {
+	flex-direction: row-reverse;
+}
+.image-text-cross.time-line01 .item .pic {
+	text-align: right;
+}
+.image-text-cross.time-line01 .item:nth-child(even) .pic {
+	text-align: left;
+}
+.image-text-cross.time-line01 .item .text {
+	text-align: left;
+}
+.image-text-cross.time-line01 .item:nth-child(even) .text {
+	text-align: right;
+}
+.text-image.time-line01 .item {
+	flex-direction: row-reverse;
+}
+.text-image.time-line01 .item .pic {
+	text-align: left;
+}
+.text-image.time-line01 .item .text {
+	text-align: right;
+}
+.text-image-cross.time-line01 .item {
+	flex-direction: row-reverse;
+}
+.text-image-cross.time-line01 .item:nth-child(even) {
+	flex-direction: row
+}
+.text-image-cross.time-line01 .item .pic {
+	text-align: left;
+}
+.text-image-cross.time-line01 .item .text {
+	text-align: right;
+}
+.text-image-cross.time-line01 .item:nth-child(even) .pic {
+	text-align: right;
+}
+.text-image-cross.time-line01 .item:nth-child(even) .text {
+	text-align: left;
+}
+.time-line01 .item .pic,
+.time-line01 .item .text {
+	width: 50%;
+}
+.time-line01 .item .num {
+	width: 225px;
+	height: 128px;
+	line-height: 134px;
+	text-align: center;
+	background: #FFF;
+	z-index: 1;
+}
+.time-line01 .item .num span {
+	position: relative;
+	display: inline-block;
+	font-size: 24px;
+	color: #FFF;
+	width: 52px;
+	height: 52px;
+	line-height: 52px;
+	border-radius: 50%;
+	background: -webkit-linear-gradient(left top, #5bcfc8, #7f6df5); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom right, #5bcfc8, #7f6df5); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom right, #5bcfc8, #7f6df5); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom right, #5bcfc8, #7f6df5); /* 标准的语法 */
+}
+.time-line01 .item .num span::after {
+	content: '';
+	position: absolute;
+	left: -10px;
+	top: -10px;
+	right: -10px;
+	bottom: -10px;
+	border-width: 10px;
+	border-style: solid;
+	border-color: rgba(24, 199, 187, 0.1);
+	border-radius: 50%;
+}
+.time-line01 .item .pic img {
+	max-width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+.time-line01 .item {
+	display: block !important;
+	padding-top: 30px !important;
+	padding-bottom: 30px !important;
+}
+.time-line01 .item .pic,
+ .time-line01 .item .text {
+	width: 100%;
+	padding-left: 90px;
+	text-align: left !important;
+}
+.time-line01 .item .text {
+	margin-top: 20px;
+}
+.time-line01 .item .num {
+	position: absolute;
+	left: 0;
+	top: 6px;
+	margin-top: 0;
+	width: 72px;
+}
+.time-line01 .line {
+	left: 36px;
+}
+}
+.time-line02 {
+	position: relative;
+}
+.time-line02 .line {
+	content: '';
+	position: absolute;
+	width: 1px;
+	margin-left: -1px;
+	left: 50%;
+	top: 0px;
+	bottom: 0px;
+	z-index: 0;
+	background: #e0e0e0;
+}
+.time-line02 .item {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 24px;
+	padding-bottom: 24px;
+}
+.time-line02 .item:first-of-type {
+	padding-top: 0 !important;
+}
+.time-line02 .item:nth-last-child(2) {
+	padding-bottom: 0 !important;
+}
+.icon-text.time-line02 .item:nth-child(even) {
+	flex-direction: row-reverse;
+}
+.icon-text.time-line02 .item .icon-title {
+	text-align: right;
+}
+.icon-text.time-line02 .item:nth-child(even) .icon-title {
+	text-align: left;
+}
+.icon-text.time-line02 .item .text {
+	text-align: left;
+}
+.icon-text.time-line02 .item:nth-child(even) .text {
+	text-align: right;
+}
+.time-line02 .item .icon-title,
+.time-line02 .item .text {
+	width: 50%;
+}
+.time-line02 .item .icon-title span {
+	display: inline-block;
+	padding-bottom: 5px;
+	font-size: 42px;
+	line-height: 1;
+}
+.time-line02 .item .icon-title i.icon-svg {
+	width: 42px;
+	height: 42px;
+}
+.time-line02 .item .pic {
+	padding: 3px;
+	border: 1px solid #ececec;
+	border-radius: 50%;
+	margin-left: 85px;
+	margin-right: 85px;
+	background: #fff;
+	z-index: 1;
+}
+.time-line02 .item .pic img {
+	border-radius: 50%;
+	width: 104px;
+	height: 104px;
+}
+
+@media only screen and (max-width: 767px) {
+.time-line02 .item {
+	display: block !important;
+	padding-top: 0 !important;
+	padding-bottom: 50px !important;
+}
+.time-line02 .item .icon-title {
+	margin-bottom: 5px;
+}
+.time-line02 .item .icon-title,
+ .time-line02 .item .text {
+	width: 100%;
+	padding-left: 134px;
+	text-align: left !important;
+}
+.time-line02 .item .pic {
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 0;
+}
+.time-line02 .item .pic img {
+	width: 90px;
+	height: 90px;
+}
+.time-line02 .line {
+	left: 50px;
+}
+}

@@ -1,0 +1,310 @@
+
+.contentbuild-section01-left{
+    padding: 97px 0 97px;
+}
+.contentbuild-section01-left .title{
+    font-size: 55px;
+    color: #333;
+    margin-bottom: 44px;
+}
+.contentbuild-section01-left p{
+    font-size: 18px;
+    line-height: 2;
+
+}
+.contentbuild-section01-left P:last-of-type{
+    margin-bottom: 54px;
+}
+
+
+.contentbuild-section01-right{
+    position:relative;
+    display:inline-block;
+    margin-right: -91px;
+    margin-left: -324px;
+    margin-top: 97px;
+    margin-bottom: 97px;
+}
+.contentbuild-section01-right .video-box{
+    position: absolute;
+    top: 10.4%;
+    left: 23.2%;
+    max-width: 65.75%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.contentbuild-section01-right video{
+    width: 100%;
+    margin: auto;
+    outline: none;
+    vertical-align: middle;
+}
+@media only screen and (max-width:1400px) {
+    .contentbuild-section01-right{
+        margin-right: -70px;
+        margin-left: -235px;
+    } 
+}
+@media only screen and (max-width:1200px) {
+    .contentbuild-section01-right{
+        margin-right: -34px;
+        margin-left: -130px;
+    }
+}
+@media only screen and (max-width:768px) {
+    .contentbuild-section01-right{
+        margin-right: -34px;
+        margin-left: -100px;
+    }
+    .contentbuild-section01-left{
+        padding-top: 45px;
+        padding-bottom: 25px;
+    }
+    .contentbuild-section01-right{
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+    .contentbuild-section01-left .title{
+        font-size: 40px;
+    }
+
+
+}
+@media only screen and (max-width:768px) {
+    .contentbuild-section01-right{
+        margin-right: 0;
+        margin-left: -54px;
+        margin-top: 30px
+    }
+}
+
+
+
+
+.contentbuild-section02 .infobox .num{
+    font-size: 80px;
+    margin-bottom: 15px;
+}
+.contentbuild-section02 .infobox .title{
+    font-weight:bold;
+    margin-bottom: 28px;
+}
+.contentbuild-section02 .infobox p{
+    line-height: 1.875;
+}
+
+.contentbuild-section03-top .dg-title{
+    margin-bottom: 50px;
+}
+.contentbuild-section03-top div[class*="col"] .title{
+    font-weight:normal;
+    color: #666;
+    margin-top: 30px;
+}
+.contentbuild-section03-top .row div[class*="col"]{
+    margin-bottom: 45px;
+}
+
+
+.contentbuild-section03-bottom .content {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 60px;
+}
+
+.contentbuild-section03-bottom .pic {
+    margin-bottom: 60px;
+}
+
+.contentbuild-section03-bottom .row:last-child div[class*="col-"]:last-child>div {
+    margin-bottom: 0;
+}
+
+.contentbuild-section03-bottom .content .title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+.contentbuild-section03-bottom .content .icon {
+    font-size: 222px;
+    color: #f5f5f5;
+    margin-right: -87px;
+}
+
+.contentbuild-section03-bottom .content .icon.fa-image {
+    font-size: 150px;
+}
+
+.contentbuild-section03-bottom .content .icon-right {
+    margin-right: 0;
+    margin-left: -87px;
+}
+
+.contentbuild-section03-bottom .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@media only screen and (max-width: 991px) {
+    .contentbuild-section03-bottom .content .icon {
+        font-size: 150px;
+    }
+}
+
+
+.contentbuild-counter .counter-box {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contentbuild-counter .counter-box .posicon {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    font-size: 150px;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.05);
+}
+
+.contentbuild-counter .counter-box .content .icon {
+    display: inline-block;
+    font-size: 50px;
+    margin-bottom: 18px;
+}
+
+.contentbuild-counter .counter-box .content .dg-title {
+    margin-bottom: 0;
+}
+
+.contentbuild-counter .counter-box .content .title {
+    font-weight: 500;
+}
+
+.contentbuild-counter .counter-box .content .title sup {
+    top: -10px
+}
+
+.contentbuild-counter .counter-box .content .info {
+    font-weight: 500;
+    margin-top: -2px;
+}
+
+
+
+.contentbuild-section04 .dg-title {
+    margin-bottom: 45px;
+}
+.contentbuild-section04 .dng-list.list-lg.list-icon li{
+    padding-left: 31px;
+    padding-bottom: 13px;
+    margin-bottom: 14px;
+}
+
+
+.contentbuild-section05 .dg-title {
+    margin-bottom: 40px;
+}
+
+.contentbuild-section05 .play-box {
+    margin-bottom: 62px;
+}
+
+.contentbuild-section05 .play-box .pic {
+    position: relative;
+    margin-bottom: 21px;
+}
+
+.contentbuild-section05 .play-box .pic img {
+    width: 100%;
+}
+
+.contentbuild-section05 .play-box .dng-play-button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.contentbuild-section05 .play-box .info {
+    font-size: 18px;
+    text-align: center;
+}
+
+.contentbuild-section05 .play-box .LightBox_youtube{
+    position: relative;
+    display: block;
+}
+.contentbuild-section05 .play-box .LightBox_youtube::after{
+    content:"\f04b";
+    width: 99px;
+    height: 99px;
+    line-height: 99px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin:-50px 0 0 -50px;
+    border-radius: 50%;
+    font-family: "Font Awesome 5 Free";
+    font-size: 45px;
+    color: #d9dfe2;
+    background-color: #0279dd;
+    text-indent: 10px;
+    font-weight: 900;
+}
+.contentbuild-section05 .play-box .LightBox_youtube::before{
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    background-color: rgba(0,0,0,.15);
+}
+
+
+
+.contentbuild-section06-top .dg-title{
+    margin-bottom: 34px;
+}
+.contentbuild-section06-top>p{
+    font-size: 18px;
+    line-height: 26px;
+}
+.contentbuild-section06-top>p:last-of-type{
+    margin-bottom: 35px;
+}
+.contentbuild-section06-top .dg-accordion .panel-heading a{
+    font-size: 16px;
+}
+
+.contentbuild-section06-top .dg-accordion07 .panel-body{
+    padding-top: 19px;
+}
+.contentbuild-section06-top .dg-accordion07 .panel-body p:last-of-type{
+    margin-bottom: 10px;
+}
+.contentbuild-section06-top .dg-accordion07 .panel-heading a.collapsed{
+    color: #666;
+}
+.contentbuild-section06-top .dg-accordion07 .panel-heading a:hover, 
+.contentbuild-section06-top .dg-accordion07 .panel-heading a{
+    color: #fff;
+}
+
+.contentbuild-section06-bottom h5 a,
+.contentbuild-section06-bottom h5 a:link{
+    color:inherit;
+}

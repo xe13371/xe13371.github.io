@@ -1,0 +1,133 @@
+
+/*
+    .dg-blockquote -> %s { Blockquotes Styles } ""(不写class则为默认样式) / left-border / right-border / left-bg none-border / right-bg none-border
+    .dg-blockquote -> text-%s { Element Alignment } left / center / right
+    .dg-blockquote -> color-%s { Color Schemes } dark / light
+	.dg-blockquote -> s { Float } ""(不写class则为默认样式) / pull-left / pull-right
+*/
+
+
+
+/* blockquote */
+.dg-blockquote {
+	border-width: 1px;
+	border-style: solid;
+	padding: 22px 27px;
+	margin: 22px 0;
+	font-style: normal;
+	color: #424242;
+}
+.dg-blockquote.color-dark {
+	border-color: #dcdcdc;
+}
+.dg-blockquote.color-light {
+	color: #ccc;
+	border-color: #777;
+}
+.dg-blockquote .small:before,
+.dg-blockquote footer:before,
+.dg-blockquote small:before {
+	content: '';
+	display: inline-block;
+	width: 30px;
+	border-bottom: 1px solid;
+	transform: translateY(-2px);
+	margin-right: 10px;
+	vertical-align: middle;
+}
+.dg-blockquote p {
+	text-indent: 0;
+	font-style: normal;
+	font-size: 18px;
+	color: inherit;
+	line-height: 1.7;
+}
+.blog-detail .dg-blockquote p {
+	margin-bottom: 0
+}
+.dg-blockquote.color-dark p {
+}
+.dg-blockquote.color-light p {
+	color: #ccc;
+}
+.dg-blockquote cite {
+	display: inline-block;
+	font-size: 16px;
+	font-style: normal;
+}
+.dg-blockquote.color-dark cite {
+	color: #424242;
+}
+.dg-blockquote.color-light cite {
+	color: #F5F5F5;
+}
+.dg-blockquote cite:before {
+	content: normal;
+}
+.dg-blockquote footer {
+	margin-top: 12px;
+	color: inherit;
+}
+.dg-blockquote.right-border {
+	border: none;
+	border-right: 3px solid #20a3f0;
+	padding: 0px 21px;
+	margin: 22px 0;
+}
+.dg-blockquote.left-border {
+	border: none;
+	border-left: 3px solid #20a3f0;
+	padding: 0px 21px;
+	margin: 22px 0;
+}
+.dg-blockquote.none-border {
+	border: none;
+	padding-bottom: 0;
+}
+.dg-blockquote.left-bg,
+.dg-blockquote.right-bg {
+	position: relative;
+	z-index: 1;
+}
+.dg-blockquote.left-bg:before,
+.dg-blockquote.right-bg:before {
+	content: "";
+	opacity: 0.3;
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	top: 0px;
+	width: 78px;
+	height: 48px;
+}
+.dg-blockquote.right-bg:before {
+	background-position: -78px 0px;
+	left: auto;
+	right: 0;
+}
+.dg-blockquote.left-bg p,
+.dg-blockquote.right-bg p {
+	text-indent: 0;
+}
+
+
+
+blockquote {
+	font-style: italic;
+	position: relative;
+	border: none;
+	margin: 0 0 20px;
+}
+blockquote p {
+	text-indent: 50px;
+	margin: 0;
+}
+blockquote small {
+	display: block;
+	line-height: 18px;
+	font-size: 12px;
+	position: absolute;
+	bottom: -42px;
+	left: 20%;
+	padding: 24px 0 0 30px;
+}

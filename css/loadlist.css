@@ -1,0 +1,295 @@
+/*
+
+
+.dg-loadlist -> %s { 控制数据条的外观样式 } dg-bar01 / dg-bar02 / dg-bar03 / dg-bar04 / dg-bar05
+
+.dg-loadlist -> %s { 控制数字的外观样式 } bar-none / bar-arrow01 / bar-arrow02 / bar-arrow03 / bar-arrow04
+
+.dg-loadlist -> %s { 控制数据条的边角是圆还是方的 } border-linear / border-round
+
+.dg-loadlist -> %s { 控制数据条是否有条纹 } show-stripes
+
+.dg-loadlist -> %s { 控制数据条的大小 } size-xs / size-sm / medium / size-lg / size-xl
+
+
+*/
+
+
+/*loadlist*/
+.dg-loadlist h6 {
+	font-size: 14px;
+}
+.dg-loadlist .bar {
+	position: relative;
+	height: 100%;
+	width: 0;
+	background-color: currentColor;
+	transition: width ease-in 400ms;
+	-moz-transition: width ease-in 400ms; /* Firefox 4 */
+	-webkit-transition: width ease-in 400ms; /* Safari and Chrome */
+	-o-transition: width ease-in 400ms; /* Opera */
+	-ms-transition: width ease-in 400ms; /* IE9? */
+}
+.dg-loadlist .progress {
+	position: relative;
+	height: 14px;
+	margin: 0 0 24px 0;
+	color: #20a3f0;
+    background-color: transparent;
+	overflow: initial;
+	box-shadow:none;
+}
+.dg-loadlist .progress::before{
+	position: absolute;
+	content: '';
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: currentColor;
+	opacity: 0.05; 
+}
+.dg-loadlist .bar span {
+	position: absolute;
+	left: 100%;
+	margin-left: -5px;
+	top: -32px;
+	font-size: 13px;
+	line-height: 1;
+	padding: 3px 6px;
+	border-bottom: none;
+    display: none;
+}
+.dg-loadlist.bar-arrow01 .bar span {
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+    background-color: transparent!important;
+}
+.dg-loadlist.bar-arrow02 .bar span {
+	background-color: #2b2b2b;
+	border-color: #2b2b2b;
+	font-size: 13px;
+	color: #FFF;
+	line-height: 21px;
+	height: 21px;
+	padding: 0 5px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.dg-loadlist.bar-arrow02 .bar span:after {
+	content: "";
+	border: 4px solid transparent;
+	border-right-color: transparent!important;
+	border-left-color: transparent!important;
+	border-bottom-color: transparent!important;
+	border-top-color: inherit;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -3px;
+}
+.dg-loadlist.bar-arrow03 .bar span {
+	background-color: #2b2b2b;
+	font-size: 13px;
+	color: #FFF;
+	line-height: 19px;
+	height: 19px;
+	padding: 0 5px;
+	border-radius: 3px 3px 3px 0;
+	-moz-border-radius: 3px 3px 3px 0;
+	-webkit-border-radius: 3px 3px 3px 0;
+}
+.dg-loadlist.bar-arrow03 .bar span:after {
+	content: "";
+	border: 2px solid transparent;
+	border-right-color: transparent!important;
+	border-bottom-color: transparent!important;
+	border-top-color: #2b2b2b;
+	border-left-color: #2b2b2b;
+	position: absolute;
+	top: 100%;
+	left: 0;
+}
+.dg-loadlist.bar-arrow04 .bar span {
+	padding: 3px 6px;
+	border: 1px solid;
+	background-color: transparent!important;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+.dg-loadlist.bar-arrow04 .bar span:after {
+	content: "";
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	border-bottom: 1px solid;
+	border-right: 1px solid;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	top: 100%;
+	left: 50%;
+	background-color: transparent!important;
+	;
+	margin: -2px 0 0 -2px;
+}
+.dg-loadlist.bar-none .bar span {
+	display: none!important;
+}
+.dg-loadlist.dg-bar01 .progress {
+	background-color: transparent!important;
+	position: relative;
+	border: 1px solid #dddddd;
+}
+.dg-loadlist.dg-bar01 .progress::before{
+	background-color: transparent!important;
+}
+.dg-loadlist.dg-bar01 .bar {
+	position: absolute;
+	top: -1px;
+	bottom: -1px;
+	left: -1px;
+	height: auto;
+}
+.dg-loadlist.dg-bar02 .progress {
+	/* background-color: #ebebeb; */
+}
+.dg-loadlist.dg-bar03 .progress {
+	/* background-color: #ececec; */
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+}
+.dg-loadlist.dg-bar04 .progress {
+	/* background-color: #dfedf6; */
+	padding: 5px;
+}
+.dg-loadlist.dg-bar05 .progress {
+	background-color: transparent!important;
+	position: relative;
+	border: 1px solid #dddddd;
+}
+.dg-loadlist.dg-bar05 .progress::before{
+	background-color: transparent!important;
+}
+.dg-loadlist.dg-bar05 .bar {
+	position: absolute;
+	top: -1px;
+	bottom: -1px;
+	left: -1px;
+	height: auto;
+}
+.dg-loadlist.dg-bar05 .bar:after {
+	content: "";
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	width: 10px;
+	height: 10px;
+	background: #FFF;
+}
+.dg-loadlist.dg-bar06 .progress {
+	position: relative;
+	z-index: 1;
+}
+.dg-loadlist.dg-bar06 .progress:after {
+	content: "";
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	position: absolute;
+	background-color: #f2f2f2;
+	border: 1px solid #e9e9e9;
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(242,242,242,0.9), rgba(255,255,255,0.9) );
+	background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0.9), rgba(242,242,242,0.9), rgba(255,255,255,0.9));
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff', endColorstr='#f2f2f2', GradientType=0 );
+}
+
+.dg-loadlist.border-round .progress,
+.dg-loadlist.border-round .progress::before,
+.dg-loadlist.border-round .bar,
+.dg-loadlist.border-round.dg-bar05 .bar:after,
+.dg-loadlist.border-round.dg-bar06 .progress:after {
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+}
+.dg-loadlist.size-xs .progress {
+	height: 10px;
+	margin-bottom: 10px;
+}
+.dg-loadlist.size-sm .progress {
+	height: 12px;
+	margin-bottom: 20px;
+}
+.dg-loadlist.size-lg .progress {
+	height: 16px;
+	margin-bottom: 28px;
+}
+.dg-loadlist.size-xl .progress {
+	height: 18px;
+	margin-bottom: 32px;
+}
+.dg-loadlist.size-xs.dg-bar04 .progress {
+	padding: 4px;
+}
+.dg-loadlist.size-sm.dg-bar04 .progress {
+	padding: 4px;
+}
+.dg-loadlist.size-xs .progress .bar:after {
+	width: 6px;
+	height: 6px;
+}
+.dg-loadlist.size-sm .progress .bar:after {
+	width: 8px;
+	height: 8px;
+}
+.dg-loadlist.size-lg .progress .bar:after {
+	width: 12px;
+	height: 12px;
+}
+.dg-loadlist.size-xl .progress .bar:after {
+	top: 3px;
+	right: 3px;
+	width: 12px;
+	height: 12px;
+}
+@-webkit-keyframes progress-bar-stripes {
+from {
+background-position:40px 0
+}
+to {
+background-position:0 0
+}
+}
+@-o-keyframes progress-bar-stripes {
+from {
+background-position:40px 0
+}
+to {
+background-position:0 0
+}
+}
+@keyframes progress-bar-stripes {
+from {
+background-position:40px 0
+}
+to {
+background-position:0 0
+}
+}
+.dg-loadlist.show-stripes .bar {
+	background-image: -webkit-linear-gradient(-45deg, rgba(255,255,255,.3) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.3) 50%, rgba(255,255,255,.3) 75%, transparent 75%, transparent);
+	background-image: -o-linear-gradient(-45deg, rgba(255,255,255,.3) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.3) 50%, rgba(255,255,255,.3) 75%, transparent 75%, transparent);
+	background-image: linear-gradient(-45deg, rgba(255,255,255,.3) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.3) 50%, rgba(255,255,255,.3) 75%, transparent 75%, transparent);
+	background-size: 40px 40px;
+	-webkit-animation: progress-bar-stripes 2s linear infinite;
+	-o-animation: progress-bar-stripes 2s linear infinite;
+	animation: progress-bar-stripes 2s linear infinite;
+}

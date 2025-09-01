@@ -1,0 +1,342 @@
+/*
+    .dng-list  -> list-%s { Bullet Type } ""(不写这个class则是默认样式) / numbers / icon / none
+    if ( numbers || icon )
+        .dng-list  -> list-%s { Bullet Style } ""(不写这个class则是默认样式) / border / background
+        .dng-list  -> position-%s { Bullet Position } ""(不写这个class则是默认样式) / middle
+	end
+	
+	.dng-list  -> em-%s { List Size } ""(不写这个class则是默认样式) / sm / lg 
+	if ( icon )
+        .dng-list  -> em-%s { List Size } ""(不写这个class则是默认样式) / sm / lg / xl / xxl
+	end
+	.dng-list  -> line-%s { Divider Styles } ""(不写这个class则是默认样式) / solid / dashed / dotted
+
+*/
+
+
+
+
+/* ********* ShortCodes-list ******** */
+ul {
+	margin-left: 20px;
+	list-style-type: disc;
+}
+ul,
+ol {
+	padding: 0;
+	-webkit-padding-start: 0;
+}
+ul ul {
+	padding-top: 0px;
+	list-style-type: circle;
+}
+ol ol {
+	padding-top: 3px;
+}
+ol {
+	margin-left: 1.6em;
+	list-style-position: outside;
+}
+ol li {
+	padding-left: 6px;
+}
+.list-numbers ul,
+.list-numbers ol {
+	counter-reset: custom-counter;
+	list-style: none;
+	margin: 0;
+}
+.list-icon ul,
+.list-icon ol {
+	list-style: none;
+	margin: 0;
+}
+.list-numbers li,
+.list-icon li {
+	position: relative;
+	margin-bottom: 3px;
+	line-height: 24px;
+}
+.list-numbers li:before,
+.list-icon li i,
+.list-icon li em {
+	position: absolute;
+	top: 3px;
+	left: 0;
+	color: #20a3f0;
+	line-height: 1;
+	display: inline-block;
+}
+.list-numbers li:before {
+	content: counter(custom-counter);
+	counter-increment: custom-counter;
+	font-family: 'Arial';
+	font-weight: bold;
+}
+.list-numbers.em-border li:before,
+.list-icon.em-border li i,
+.list-icon.em-border li em {
+	width: 26px;
+	height: 26px;
+	line-height: 24px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	display: inline-block;
+	border: 1px solid #20a3f0;
+	text-align: center;
+}
+.list-numbers.em-background li:before,
+.list-icon.em-background li i,
+.list-icon.em-background li em {
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	display: inline-block;
+	text-align: center;
+	background-color: #20a3f0;
+	color: #FFF;
+}
+.dng-list.list-none ul {
+	margin-left: 0;
+	list-style-type: none;
+}
+.dng-list.line-solid li,
+.dng-list.line-dashed li,
+.dng-list.line-dotted li {
+	border-bottom: 1px solid #dcdcdc;
+}
+.dng-list.line-dashed li {
+	border-bottom-style: dashed;
+}
+.dng-list.line-dotted li {
+	border-bottom-style: dotted;
+}
+.dng-list > p {
+	margin-bottom: 0!important;
+}
+.dng-list.list-sm li {
+	margin-bottom: 3px;
+}
+.dng-list.list-sm ul ul {
+	margin-top: 6px;
+}
+.dng-list.list-sm.list-numbers li {
+	padding-left: 18px;
+}
+.dng-list.list-sm.list-icon li {
+	padding-left: 20px;
+}
+.dng-list.list-sm.list-numbers li:before,
+.dng-list.list-sm.list-icon li i,
+.dng-list.list-sm.list-icon li em {
+	font-size: 0.8em;
+	top: 6px;
+}
+.dng-list.list-sm.em-border li:before,
+.dng-list.list-sm.em-border li i,
+.dng-list.list-sm.em-border li em,
+.dng-list.list-sm.em-background li:before,
+.dng-list.list-sm.em-background li i,
+.dng-list.list-sm.em-background li em {
+	width: 18px;
+	height: 18px;
+	line-height: 18px;
+	top: 2px;
+}
+.dng-list.list-sm.em-border li:before,
+.dng-list.list-sm.em-border li i,
+.dng-list.list-sm.em-border li em {
+	line-height: 16px;
+}
+.dng-list.list-sm.em-border li,
+.dng-list.list-sm.em-background li {
+	padding-left: 27px;
+	margin-bottom: 9px;
+}
+.dng-list.list-sm.em-border ul ul,
+.dng-list.list-sm.em-background ul ul {
+	margin-top: 9px;
+}
+.dng-list.line-solid.list-sm li,
+.dng-list.line-dashed.list-sm li,
+.dng-list.line-dotted.list-sm li {
+	margin-bottom: 9px;
+	padding-bottom: 9px;
+}
+.dng-list li {
+	margin-bottom: 6px;
+}
+.dng-list ul ul {
+	margin-top: 6px;
+}
+.dng-list.list-numbers li {
+	padding-left: 20px;
+}
+.dng-list.list-icon li {
+	padding-left: 22px;
+}
+.dng-list.list-numbers li:before,
+.dng-list.list-icon li i,
+.dng-list.list-icon li em {
+	font-size: 1em;
+}
+.dng-list.em-border li:before,
+.dng-list.em-border li i,
+.dng-list.em-border li em,
+.dng-list.em-background li:before,
+.dng-list.em-background li i,
+.dng-list.em-background li em {
+	width: 26px;
+	height: 26px;
+	line-height: 26px;
+	top: -1px;
+}
+.dng-list.em-border li:before,
+.dng-list.em-border li i,
+.dng-list.em-border li em {
+	line-height: 24px;
+}
+.dng-list.em-border li,
+.dng-list.em-background li {
+	padding-left: 36px;
+	margin-bottom: 14px;
+}
+.dng-list.em-border ul ul,
+.dng-list.em-background ul ul {
+	margin-top: 14px;
+}
+.dng-list.line-solid li,
+.dng-list.line-dashed li,
+.dng-list.line-dotted li {
+	margin-bottom: 14px;
+	padding-bottom: 14px;
+}
+.dng-list.list-lg li {
+	margin-bottom: 9px;
+}
+.dng-list.list-lg ul ul {
+	margin-top: 9px;
+}
+.dng-list.list-lg.list-numbers li {
+	padding-left: 22px;
+}
+.dng-list.list-lg.list-icon li {
+	padding-left: 26px;
+}
+.dng-list.list-lg.list-numbers li:before,
+.dng-list.list-lg.list-icon li i,
+.dng-list.list-lg.list-icon li em {
+	font-size: 1.1em;
+}
+.dng-list.list-lg.em-border li:before,
+.dng-list.list-lg.em-border li i,
+.dng-list.list-lg.em-border li em,
+.dng-list.list-lg.em-background li:before,
+.dng-list.list-lg.em-background li i,
+.dng-list.list-lg.em-background li em {
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	margin-top: -1px;
+}
+.dng-list.list-lg.em-border li:before,
+.dng-list.list-lg.em-border li i,
+.dng-list.list-lg.em-border li em {
+	line-height: 29px;
+}
+.dng-list.list-lg.em-border li,
+.dng-list.list-lg.em-background li {
+	padding-left: 42px;
+	margin-bottom: 18px;
+	padding-top: 1px;
+}
+.dng-list.list-lg.em-border ul ul,
+.dng-list.list-lg.em-background ul ul {
+	margin-top: 18px;
+}
+.dng-list.line-solid.list-lg li,
+.dng-list.line-dashed.list-lg li,
+.dng-list.line-dotted.list-lg li {
+	margin-bottom: 18px;
+	padding-bottom: 18px;
+}
+
+
+.dng-list.list-xl.list-numbers:not(.em-background) li:before{
+	color: #ffffff;
+}
+
+.dng-list.list-xl.list-numbers.em-border li:before {
+border-color: #ffffff;
+}
+.dng-list.list-xl.list-icon:not(.em-background) li > i,
+.dng-list.list-xl.list-icon:not(.em-background) li > em,
+.dng-list.list-xl.list-icon:not(.em-background) li > a > i,
+.dng-list.list-xl.list-icon:not(.em-background) li > a > em{
+color: #ffffff;
+}
+.dng-list.list-xl.dng-list li{
+margin-bottom: 16px;
+font-size : 14px;
+}
+.dng-list.list-xl.dng-list.list-numbers li,
+.dng-list.list-xl.dng-list.list-icon li {
+	padding-left:32.6px;
+}
+.dng-list.list-xl.dng-list.list-icon.em-border li {
+    padding-left: 60px;
+    margin-bottom: 30px;
+}
+.dng-list.list-xl.list-icon li > i,
+.dng-list.list-xl.list-icon li > em,
+.dng-list.list-xl.list-icon li > a > i,
+.dng-list.list-xl.list-icon li > a > em,
+.dng-list.list-xl.list-numbers li:before{
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+	-webkit-transform-origin: left center;
+	transform-origin: left center;
+}
+
+
+
+.dng-list.list-xxl li {
+	margin-bottom: 26px;
+}
+.dng-list.list-xxl ul ul {
+	margin-top: 26px;
+}
+.dng-list.list-xxl.list-icon li {
+	padding-left: 40px;
+}
+.dng-list.list-xxl.list-icon li i{
+	font-size: 1.1em;
+}
+.dng-list.list-xxl.list-icon li i{
+	-webkit-transform: scale(1.4);
+	transform: scale(1.4);
+	-webkit-transform-origin: left center;
+	transform-origin: left center; 
+}
+.dng-list.line-solid.list-xxl li,
+.dng-list.line-dashed.list-xxl li,
+.dng-list.line-dotted.list-xxl li {
+	margin-bottom: 26px;
+	padding-bottom: 26px;
+}
+
+
+
+
+
+.list-numbers.position-middle li:before,
+.list-icon.position-middle li i,
+.list-icon.position-middle li em {
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}

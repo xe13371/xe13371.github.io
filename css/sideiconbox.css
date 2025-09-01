@@ -1,0 +1,246 @@
+/*
+
+
+.dg-sideiconbox -> %s { 控制整块的外观布局 } side-box01 / side-box02 / side-box03 / side-box04
+
+.dg-sideiconbox -> %s { icon外的边框是否是带3px圆角的方框 } square
+
+.dg-sideiconbox -> %s { 控制文字是深色还是浅色(白色) } color-dark / color-light
+
+.dg-sideiconbox -> %s { 控制滑过后文字的颜色 } hovercolor-light
+
+.dg-sideiconbox -> %s { 控制滑过后icon的颜色 } hovericon-light
+
+.dg-sideiconbox -> %s { 控制滑过后的背景颜色 } single-bg(单一颜色) / grad-bg(渐变颜色)
+
+.dg-sideiconbox -> %s { 控制滑过后是否有阴影 } hovershadow
+
+.side-box01>div:first-child -> %s { 控制icon的外观样式和动画 } dg-ico-max / dg-ico02 / dg-ico03 / dg-ico05 / dg-ico06 / dg-ico-animation03  / dg-ico-animation05 / dg-ico-animation04 / dg-ico-animation02 / dg-ico-animation08 / dg-ico-animation11 / dg-ico-animation12  / dg-ico-animation06 / dg-ico-animation07 / dg-ico-animation09  / dg-ico-animation10
+.side-box02>div:first-child -> %s { 控制icon的外观样式和动画 } dg-ico-max / dg-ico02 / dg-ico03 / dg-ico05 / dg-ico06 / dg-ico-animation03  / dg-ico-animation05 / dg-ico-animation04 / dg-ico-animation02 / dg-ico-animation08 / dg-ico-animation11 / dg-ico-animation12  / dg-ico-animation06 / dg-ico-animation07 / dg-ico-animation09  / dg-ico-animation10
+.side-box03 .icon-vertical div-> %s { 控制icon的外观样式和动画 } dg-ico-max / dg-ico02 / dg-ico03 / dg-ico05 / dg-ico06 / dg-ico-animation03  / dg-ico-animation05 / dg-ico-animation04 / dg-ico-animation02 / dg-ico-animation08 / dg-ico-animation11 / dg-ico-animation12  / dg-ico-animation06 / dg-ico-animation07 / dg-ico-animation09  / dg-ico-animation10
+.side-box04 .icon-vertical div-> %s { 控制icon的外观样式和动画 } dg-ico-max / dg-ico02 / dg-ico03 / dg-ico05 / dg-ico06 / dg-ico-animation03  / dg-ico-animation05 / dg-ico-animation04 / dg-ico-animation02 / dg-ico-animation08 / dg-ico-animation11 / dg-ico-animation12  / dg-ico-animation06 / dg-ico-animation07 / dg-ico-animation09  / dg-ico-animation10
+.side-box01>div:first-child -> %s { 控制icon的大小 } size-xs / size-sm / size-lg / size-xl / size-xxl
+.side-box02>div:first-child -> %s { 控制icon的大小 } size-xs / size-sm / size-lg / size-xl / size-xxl
+.side-box03 .icon-vertical div -> %s { 控制icon的大小 } size-xs / size-sm / size-lg / size-xl / size-xxl
+.side-box04 .icon-vertical div -> %s { 控制icon的大小 } size-xs / size-sm / size-lg / size-xl / size-xxl
+
+.dg-ico-animation03 -> %s { 控制icon的滑过动画是从里向外扩还是从外向里收 } animation-out / animation-in
+.dg-ico-animation02 -> %s { 控制icon的滑过动画是从里向外扩还是从外向里收 } animation-out / animation-in
+
+.dg-ico-animation06 -> %s { 控制icon的滑过动画是从哪个方向进 } animation-top / animation-left / animation-bottom / animation-right
+
+.side-box01>div:first-child -> %s { 控制icon的是居于左还是右 } left / right
+.side-box02>div:first-child -> %s { 控制icon的是居于左还是右 } left / right
+
+.side-box01 div:nth-child(2) -> %s { 控制文字的是居于右还是左 } box-left / box-right
+.side-box02 div:nth-child(2) -> %s { 控制文字的是居于右还是左 } box-left / box-right
+.side-box03 -> %s { 控制文字的对齐方向 } .text-left / .text-right
+.side-box04 -> %s { 控制文字的对齐方向 } .text-left / .text-right
+
+
+
+*/
+
+
+/*sideiconbox*/
+body .dg-sideiconbox {
+    margin:0 0 15px;
+}
+.dg-sideiconbox p{
+	margin-bottom:8px;
+}
+
+
+.dg-sideiconbox .sideiconbox-button:before{
+  content: "";
+  display: block;
+  overflow: hidden;
+  
+}
+
+.dg-sideiconbox.left+.box-right,
+.dg-sideiconbox.right+.box-right,
+.dg-sideiconbox.left+.box-left,
+.dg-sideiconbox.right+.box-left {
+    overflow: hidden;
+}
+
+.dg-sideiconbox.left {
+    margin-right: 20px;
+}
+
+.dg-sideiconbox.right {
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.dg-sideiconbox .box-left {
+    text-align: right;
+}
+
+.dg-sideiconbox .box-right {
+    text-align: left;
+}
+
+.dg-sideiconbox .box-right small {
+    font-size: 13px;
+    color: #7f7f7f;
+    font-style: italic;
+    display: block;
+}
+.dg-sideiconbox .box-right .title + small {
+  margin-top: -12px;
+  margin-bottom: 12px;
+}
+
+.dg-sideiconbox.display-table p {
+    margin: 0;
+}
+.dg-sideiconbox .title {
+    margin: 0 0 11px;
+}
+
+.dg-sideiconbox a,
+.dg-sideiconbox button,
+.dg-sideiconbox input{
+	position: relative;
+	z-index:4;
+}
+.dg-sideiconbox .fix-line{
+	position: absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	z-index: 3;
+}
+.dg-sideiconbox.side-box02 .title:before{
+  content: "";
+  width: 34px;
+  display: block;
+  border-bottom: 1px solid;
+  margin-bottom: 14px;
+}
+
+.dg-sideiconbox.side-box02.text-right .title:before{
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.dg-sideiconbox.side-box03 .left{
+  float: none;
+  vertical-align: middle;
+}
+.dg-sideiconbox.side-box03 .title-icon{
+  margin-bottom: 15px;
+  display: table;
+  width: 100%;
+}
+.dg-sideiconbox.side-box03 .title {
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0;
+}
+.dg-sideiconbox.side-box03 .title-icon .icon-vertical{
+  display: table-cell;
+  vertical-align: middle;
+  width: 1%;
+}
+.dg-sideiconbox.side-box03  .box-content > small{
+    font-size: 13px;
+    color: #7f7f7f;
+    font-style: italic;
+    display: block;
+  margin-bottom: 12px;
+}
+
+.dg-sideiconbox.side-box04 .left{
+  float: none;
+  vertical-align: middle;
+}
+.dg-sideiconbox.side-box04 .title-icon{
+  margin-bottom: 15px;
+  display: table;
+  width: 100%;
+}
+.dg-sideiconbox.side-box04 .title-vertical {
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0;
+}
+.dg-sideiconbox.side-box04 .title-icon .icon-vertical{
+  display: table-cell;
+  vertical-align: middle;
+  width: 1%;
+}
+.dg-sideiconbox.side-box04 .title {
+  margin: 0;
+}
+
+.dg-sideiconbox.side-box04  .title-vertical > small{
+    font-size: 13px;
+    color: #7f7f7f;
+    font-style: italic;
+    display: block;
+}
+
+.dg-sideiconbox.color-light,
+.dg-sideiconbox.color-light .title{
+  color: #FFF;  
+}
+
+.dg-sideiconbox.side-box03.text-right .title-icon,
+.dg-sideiconbox.side-box04.text-right .title-icon{
+  direction: rtl;
+}
+.dg-sideiconbox:hover .dg-ico05{
+	color: #FFF !important;
+}
+
+
+
+@media (max-width: 991px) {
+	.dg-sideiconbox [class*=dg-ico].right {
+		float: left !important;
+	}
+	
+	.dg-sideiconbox .box-left {
+		text-align: left !important;
+	}
+	.dg-sideiconbox.text-right{
+		text-align: left !important;
+	}
+	
+	.dg-sideiconbox.side-box02.text-right .title:before{
+		margin-right: auto;
+		margin-left: 0;
+	}
+	
+	.dg-sideiconbox.side-box03.text-right .title-icon,
+	.dg-sideiconbox.side-box04.text-right .title-icon{
+	  direction: ltr;
+	}
+	.dg-sideiconbox [class*=dg-ico].size-xs.right {
+		margin-left: 0;
+		margin-right: 20px;
+	}
+	.dg-sideiconbox [class*=dg-ico].size-sm.left {
+		margin-right: 20px;
+	}
+	.dg-sideiconbox [class*=dg-ico].size-sm.right {
+		margin-left: 0;
+		margin-right: 20px;
+	}
+	.dg-sideiconbox [class*=dg-ico].size-lg.right {
+		margin-left: 0;
+		margin-right: 20px;
+	}
+	.dg-sideiconbox [class*=dg-ico].size-xl.right {
+		margin-left: 0;
+		margin-right: 20px;
+	}
+	.dg-sideiconbox [class*=dg-ico].size-xxl.right {
+		margin-left: 0;
+		margin-right: 20px;
+	}
+}

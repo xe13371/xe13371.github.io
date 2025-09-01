@@ -1,0 +1,179 @@
+
+/*
+
+	.dg-chart -> %s { 控制数据条的外观样式 } dg-chart01 / dg-chart02
+
+	.dg-chart .decorate -> data-linecap="%s" { 控制曲线的边角是圆还是方 } round / linear
+
+	.dg-chart .decorate -> data-percent="%s" { 控制加载后最终的数字是多少 } 0,1,2...
+
+	.dg-chart .decorate -> data-size="%s" { circle size } 0,1,2.....
+
+	.dg-chart .decorate -> data-linewidth="%s" { line width } 0,1,2......
+
+
+
+	
+data-animate="1000"
+data-barColor=""  .decorate得颜色
+data-linecap="linear" 
+data-linewidth="10" 
+data-percent="75" 
+data-size="200" 
+data-trackcolor="transparent" 
+data-scaleColor="false"
+
+
+data-space="30"
+data-fontSize="42" 
+data-bgWidth="36"
+data-bgColor=" " 
+data-opacity=" "
+*/
+
+
+/*chartlist*/
+.dg-chartlist01 {
+	text-align: center;
+}
+.dg-chartlist01 .decorate {
+	display: inline-block;
+	position: relative;
+	margin-bottom: 42px;
+}
+.dg-chartlist01 canvas {
+	vertical-align: middle;
+}
+.dg-chartlist01 .percentage_inner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	color: #FFF;
+	font-size: 40px;
+}
+.dg-chartlist01 h3 {
+	font-size: 20px;
+	margin-bottom: 18px;
+}
+.dg-chartlist01 p {
+	margin: 0px 12% 30px;
+}
+
+@media only screen and (max-width: 991px) {
+.dg-chartlist01 .decorate {
+	margin-bottom: 25px;
+}
+}
+.dg-chartlist02 {
+	text-align: center;
+	color: #333333;
+}
+.dg-chartlist02 .decorate {
+	display: inline-block;
+	position: relative;
+	margin: 20px 0 35px;
+}
+.dg-chartlist02 .decorate:after {
+	content: "";
+	position: absolute;
+	left: -16px;
+	right: -16px;
+	top: -16px;
+	bottom: -16px;
+	border-width: 36px;
+	border-style: solid;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	opacity: 0.08;
+}
+.dg-chartlist02 canvas {
+	vertical-align: middle;
+}
+.dg-chartlist02 .percentage_inner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	font-size: 42px;
+}
+.dg-chartlist02 h3 {
+	font-size: 15px;
+	color: #333333;
+	margin-bottom: 5px;
+}
+.dg-chartlist02 > div {
+	margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 1366px) and (min-width: 1024px) {
+.dg-chartlist02 .decorate:after {
+	opacity: 0;
+}
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) and (orientation: landscape) {
+.dg-chartlist02 .decorate:after {
+	opacity: 0;
+}
+}
+.dg-chartlist03 {
+	text-align: center;
+	color: #FFF;
+	margin: 0 0 15px;
+}
+.dg-chartlist03 .decorate {
+	display: inline-block;
+	position: relative;
+	margin-bottom: 25px;
+}
+.dg-chartlist03 canvas {
+	vertical-align: middle;
+}
+.dg-chartlist03 .percentage_inner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	color: #FFF;
+	font-size: 30px;
+}
+.dg-chartlist03 h5 {
+	color: #FFF;
+	margin: 14px 0 8px;
+}
+.dg-chartlist03 small {
+	margin-bottom: 30px;
+	display: block;
+}
+.dg-chart {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.dg-chart .decorate {
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	color: #20a3f0;
+	font-size: 0;
+}
+.dg-chart .percentage_inner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+.dg-chart.dg-chart01 .decorate .bg {
+	position: absolute;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	z-index: -1;
+	border-style: solid;
+	border-color: rgba(32,163,240,0.2);
+}
